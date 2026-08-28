@@ -15,30 +15,30 @@ header: "Γα=Ω5 (CPC-GALLOS)"
 <div class="toc-row toc-cat-base"><span class="toc-p">3</span><span class="toc-title">2. Limits & I/O Manipulation</span><span class="toc-desc">numeric_limits, __int128, getline, math funcs</span></div>
 <div class="toc-row toc-cat-base"><span class="toc-p">4</span><span class="toc-title">3. Bits & std::bitset</span><span class="toc-desc">Bit hacks, int2bin, bin2int, submasks, Gosper</span></div>
 <div class="toc-row toc-cat-base"><span class="toc-p">5</span><span class="toc-title">4. Strings & Parsing</span><span class="toc-desc">stringstream, palindromes, rotations, KMP</span></div>
-<div class="toc-row toc-cat-math"><span class="toc-p">6</span><span class="toc-title">5. Number Theory I: Primes</span><span class="toc-desc">Primes, 64-bit Miller-Rabin, SPF, Factorizations</span></div>
-<div class="toc-row toc-cat-math"><span class="toc-p">7</span><span class="toc-title">6. Combinatorics & Counting</span><span class="toc-desc">nCr, nPr, Stars & Bars, Catalan, Derangements</span></div>
-<div class="toc-row toc-cat-geom"><span class="toc-p">8</span><span class="toc-title">7. 2D Geometry I: Vectors</span><span class="toc-desc">complex pt, Dot/Cross, CCW, Dist, Convex Hull</span></div>
-<div class="toc-row toc-cat-algo"><span class="toc-p">9</span><span class="toc-title">8. Sorting & Coordinate Comp</span><span class="toc-desc">STL sort, Custom comparators, Compression, Pollard's ρ</span></div>
-<div class="toc-row toc-cat-algo"><span class="toc-p">10</span><span class="toc-title">9. Binary & Ternary Search</span><span class="toc-desc">lower/upper_bound, BS on answer, Ternary</span></div>
-<div class="toc-row toc-cat-math"><span class="toc-p">11</span><span class="toc-title">10. Number Theory II: Modulo</span><span class="toc-desc">ExtGCD, Mod exp/inv, Totient, Sieve, CRT</span></div>
-<div class="toc-row toc-cat-graph"><span class="toc-p">12</span><span class="toc-title">11. Range Queries & Prefix Sums</span><span class="toc-desc">1D/2D Prefix, Diff Array, Sqrt, Fenwick (BIT)</span></div>
-<div class="toc-row toc-cat-algo"><span class="toc-p">13</span><span class="toc-title">12. Two Pointers & Window</span><span class="toc-desc">Two-sum, Variable window, Monotonic deque</span></div>
+<div class="toc-row toc-cat-algo"><span class="toc-p">6</span><span class="toc-title">5. Sorting & Coordinate Comp</span><span class="toc-desc">STL sort, Custom comparators, Compression, Pollard's ρ</span></div>
+<div class="toc-row toc-cat-algo"><span class="toc-p">7</span><span class="toc-title">6. Binary & Ternary Search</span><span class="toc-desc">lower/upper_bound, BS on answer, Ternary</span></div>
+<div class="toc-row toc-cat-math"><span class="toc-p">8</span><span class="toc-title">7. Number Theory I: Primes</span><span class="toc-desc">Primes, 64-bit Miller-Rabin, SPF, Factorizations</span></div>
+<div class="toc-row toc-cat-graph"><span class="toc-p">9</span><span class="toc-title">8. Range Queries & Prefix Sums</span><span class="toc-desc">1D/2D Prefix, Diff Array, Sqrt Decomposition</span></div>
+<div class="toc-row toc-cat-algo"><span class="toc-p">10</span><span class="toc-title">9. Two Pointers & Window</span><span class="toc-desc">Two-sum, Variable window, Monotonic deque</span></div>
+<div class="toc-row toc-cat-algo"><span class="toc-p">11</span><span class="toc-title">10. Non-Linear Structs & Algo</span><span class="toc-desc">set/map, priority_queue, unordered_set, custom_hash</span></div>
+<div class="toc-row toc-cat-math"><span class="toc-p">12</span><span class="toc-title">11. Combinatorics & Counting</span><span class="toc-desc">nCr, nPr, Stars & Bars, Catalan, Derangements</span></div>
+<div class="toc-row toc-cat-math"><span class="toc-p">13</span><span class="toc-title">12. Number Theory II: Modulo</span><span class="toc-desc">ExtGCD, Mod exp/inv, Totient, Sieve, CRT</span></div>
 
 </div>
 <div class="toc-col">
 
-<div class="toc-row toc-cat-graph"><span class="toc-p">14</span><span class="toc-title">13. 2-SAT & Segment Tree</span><span class="toc-desc">Implication graph, Kosaraju SCC, Iterative SegTree</span></div>
-<div class="toc-row toc-cat-algo"><span class="toc-p">15</span><span class="toc-title">14. Non-Linear Structs & Algo</span><span class="toc-desc">set/map, priority_queue, custom_hash, algos</span></div>
-<div class="toc-row toc-cat-geom"><span class="toc-p">16</span><span class="toc-title">15. 2D Geometry II: Polygons</span><span class="toc-desc">Line/Seg intersect, Shoelace, Pick's, PointPoly</span></div>
-<div class="toc-row toc-cat-algo"><span class="toc-p">17</span><span class="toc-title">16. Linear Structs: Stack/Queue</span><span class="toc-desc">vector, deque, Monotonic stack, Z-Function</span></div>
-<div class="toc-row toc-cat-graph"><span class="toc-p">18</span><span class="toc-title">17. Graph Traversals (DFS/BFS)</span><span class="toc-desc">DFS, Bipartite, BFS shortest, Flood fill, Topo</span></div>
-<div class="toc-row toc-cat-graph"><span class="toc-p">19</span><span class="toc-title">18. Shortest Paths, DSU & MST</span><span class="toc-desc">Dijkstra, DSU (rank & size), Kruskal, Floyd</span></div>
-<div class="toc-row toc-cat-graph"><span class="toc-p">20</span><span class="toc-title">19. Hopcroft-Karp Matching</span><span class="toc-desc">Max bipartite matching, O(E*sqrt(V))</span></div>
-<div class="toc-row toc-cat-graph"><span class="toc-p">21</span><span class="toc-title">20. Tree Algorithms & LCA</span><span class="toc-desc">Diameter (2-pass BFS), Subtree size, LCA</span></div>
-<div class="toc-row toc-cat-dp"><span class="toc-p">22</span><span class="toc-title">21. DP I: Classic Paradigms</span><span class="toc-desc">Fibonacci, 0/1 Knapsack, Coin Change, Grid</span></div>
-<div class="toc-row toc-cat-dp"><span class="toc-p">23</span><span class="toc-title">22. DP II: Sequences</span><span class="toc-desc">LIS O(N log N), LCS, Kadane, TSP bitmask</span></div>
-<div class="toc-row toc-cat-dp"><span class="toc-p">24</span><span class="toc-title">23. Greedy Algorithms</span><span class="toc-desc">Fractional Knapsack, Intervals, Coin Change</span></div>
-<div class="toc-row toc-cat-geom"><span class="toc-p">25</span><span class="toc-title">24. Matrices & Game Theory</span><span class="toc-desc">2D matrix, MatPow, Nim/Mex, XOR Basis</span></div>
+<div class="toc-row toc-cat-algo"><span class="toc-p">14</span><span class="toc-title">13. Linear Structs: Stack/Queue</span><span class="toc-desc">vector, deque, Monotonic stack, Z-Function</span></div>
+<div class="toc-row toc-cat-graph"><span class="toc-p">15</span><span class="toc-title">14. Graph Traversals (DFS/BFS)</span><span class="toc-desc">DFS, Bipartite, BFS, Flood fill, Topo, Fenwick (BIT)</span></div>
+<div class="toc-row toc-cat-graph"><span class="toc-p">16</span><span class="toc-title">15. Shortest Paths, DSU & MST</span><span class="toc-desc">Dijkstra, DSU, Kruskal, Floyd, Bellman-Ford</span></div>
+<div class="toc-row toc-cat-graph"><span class="toc-p">17</span><span class="toc-title">16. Hopcroft-Karp Matching</span><span class="toc-desc">Max bipartite matching, O(E*sqrt(V))</span></div>
+<div class="toc-row toc-cat-graph"><span class="toc-p">18</span><span class="toc-title">17. Tree Algorithms & LCA</span><span class="toc-desc">Diameter (2-pass BFS), Subtree size, LCA</span></div>
+<div class="toc-row toc-cat-dp"><span class="toc-p">19</span><span class="toc-title">18. DP I: Classic Paradigms</span><span class="toc-desc">Fibonacci, 0/1 Knapsack, Coin Change, Grid</span></div>
+<div class="toc-row toc-cat-dp"><span class="toc-p">20</span><span class="toc-title">19. DP II: Sequences</span><span class="toc-desc">LIS O(N log N), LCS, Kadane's Algorithm</span></div>
+<div class="toc-row toc-cat-dp"><span class="toc-p">21</span><span class="toc-title">20. Greedy Algorithms</span><span class="toc-desc">Fractional Knapsack, Intervals, Coin Change</span></div>
+<div class="toc-row toc-cat-geom"><span class="toc-p">22</span><span class="toc-title">21. Matrices & Game Theory</span><span class="toc-desc">2D matrix, MatPow, Nim/Mex, TSP bitmask, XOR Basis</span></div>
+<div class="toc-row toc-cat-geom"><span class="toc-p">23</span><span class="toc-title">22. 2D Geometry I: Vectors</span><span class="toc-desc">complex pt, Dot/Cross, CCW, Dist, Convex Hull</span></div>
+<div class="toc-row toc-cat-geom"><span class="toc-p">24</span><span class="toc-title">23. 2D Geometry II: Polygons</span><span class="toc-desc">Line/Seg intersect, Shoelace, Pick's, PointPoly</span></div>
+<div class="toc-row toc-cat-graph"><span class="toc-p">25</span><span class="toc-title">24. 2-SAT & Segment Tree</span><span class="toc-desc">Implication graph, Kosaraju SCC, Iterative SegTree</span></div>
 
 </div>
 </div>
@@ -364,250 +364,7 @@ vector<int> prefix_function(const string& s) {
 
 ---
 
-# 5. Number Theory I: Primes, Divisors & Factorization
-
-### First 25 Primes ($< 100$) & Classic Sieve ($O(N \log \log N)$)
-```cpp
-// 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
-vector<bool> is_prime(MAXN + 1, true); vector<int> primes;
-void sieve_of_eratosthenes(int n) {
-    is_prime[0] = is_prime[1] = false;
-    for (int p = 2; p * p <= n; ++p)
-        if (is_prime[p]) for (int i = p * p; i <= n; i += p) is_prime[i] = false;
-    for (int p = 2; p <= n; ++p) if (is_prime[p]) primes.push_back(p);
-}
-```
-
-### Deterministic Miller-Rabin for 64-bit Integers ($O(K \log^3 n), K=12$) <span class="badge-safe">64-BIT SAFE</span>
-```cpp
-inline ull mulmod(ull a, ull b, ull m) { return (ull)((__int128)a * b % m); }
-inline ull modpow(ull a, ull d, ull m) {
-    ull r = 1; a %= m; while (d) { if (d & 1) r = mulmod(r, a, m); a = mulmod(a, a, m); d >>= 1; }
-    return r;
-}
-inline bool isPrime64(ull n) { // O(12 * log n) deterministic (n < 2^64)
-    if (n < 2) return false;
-    for (ull p : {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37}) if (n % p == 0) return n == p;
-    ull d = n - 1; int r = 0; while ((d & 1) == 0) { d >>= 1; ++r; }
-    for (ull a : {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37}) {
-        if (a >= n) continue;
-        ull x = modpow(a, d, n); if (x == 1 || x == n - 1) continue;
-        bool comp = true;
-        for (int i = 0; i < r - 1; ++i) { x = mulmod(x, x, n); if (x == n - 1) { comp = false; break; } }
-        if (comp) return false;
-    }
-    return true;
-}
-inline ull nextPrime(ull n) { if (n < 2) return 2; ++n; if (n > 2 && (n & 1) == 0) ++n; while (!isPrime64(n)) n += 2; return n; }
-inline ull prevPrime(ull n) { if (n <= 2) return 0; if (n == 3) return 2; --n; if ((n & 1) == 0) --n; while (n >= 2 && !isPrime64(n)) n -= 2; return n; }
-```
-
-### Linear Sieve (SPF), Factorization & Divisors ($O(N)$ / $O(\log N)$ / $O(\sqrt{N})$)
-```cpp
-const int MAXP = 1e7; vector<int> primes, spf(MAXP + 1);
-void linear_sieve(int n = MAXP) { // O(N) build SPF & primes array
-    for (int i = 2; i <= n; ++i) {
-        if (spf[i] == 0) { spf[i] = i; primes.push_back(i); }
-        for (int p : primes) { if (p > spf[i] || (ll)i * p > n) break; spf[i * p] = p; }
-    }
-}
-// 1. O(log n) SPF fact | 2. O(primes) sieve fact | 3. O(sqrt(n)) standalone fact:
-vector<pair<int, int>> factorize_spf(int x) {
-    vector<pair<int, int>> f;
-    while (x > 1) { int p = spf[x], c = 0; while (x % p == 0) { x /= p; ++c; } f.push_back({p, c}); }
-    return f;
-}
-vector<pair<ll, int>> factorize_sieve(ll n, const vector<int>& pms) {
-    vector<pair<ll, int>> f;
-    for (int p : pms) {
-        if (1LL * p * p > n) break;
-        if (n % p == 0) { int c = 0; while (n % p == 0) { n /= p; ++c; } f.push_back({p, c}); }
-    }
-    if (n > 1) f.push_back({n, 1}); return f;
-}
-vector<pair<ll, int>> factorize(ll n) {
-    vector<pair<ll, int>> f;
-    for (ll d = 2; d * d <= n; ++d)
-        if (n % d == 0) { int c = 0; while (n % d == 0) { n /= d; ++c; } f.push_back({d, c}); }
-    if (n > 1) f.push_back({n, 1}); return f;
-}
-// Generate all divisors in O(d(N)) | Sum of Divisors Sieve in O(N log N):
-void get_divisors(int idx, ll cur, const vector<pair<int, int>>& f, vector<ll>& divs) {
-    if (idx == sz(f)) { divs.push_back(cur); return; }
-    for (int i = 0; i <= f[idx].second; ++i) { get_divisors(idx + 1, cur, f, divs); cur *= f[idx].first; }
-}
-vector<ll> sum_divisors_sieve(int n) {
-    vector<ll> s(n + 1, 0); for (int i = 1; i <= n; ++i) for (int j = i; j <= n; j += i) s[j] += i;
-    return s;
-}
-```
-
----
-
-# 6. Combinatorics & Counting
-
-### Factorials & Binomial Coefficients ($O(N)$ Prep, $O(1)$ Query)
-$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
-
-```cpp
-const int MAXC = 1e6;
-const ll MOD = 1e9 + 7;
-ll fac[MAXC + 1], invFac[MAXC + 1];
-
-void init_comb(int n = MAXC) { // O(N) precalc
-    fac[0] = 1;
-    for (int i = 1; i <= n; ++i) fac[i] = fac[i - 1] * i % MOD;
-    invFac[n] = mod_exp(fac[n], MOD - 2, MOD);
-    for (int i = n - 1; i >= 0; --i) invFac[i] = invFac[i + 1] * (i + 1) % MOD;
-}
-
-ll nCr(int n, int r) { // O(1) query
-    if (r < 0 || r > n) return 0;
-    return fac[n] * invFac[r] % MOD * invFac[n - r] % MOD;
-}
-
-ll nPr(int n, int r) { // O(1) query
-    if (r < 0 || r > n) return 0;
-    return fac[n] * invFac[n - r] % MOD;
-}
-
-// Stars & Bars: n identical items into k distinct bins: O(1)
-ll stars_and_bars(int n, int k) { return nCr(n + k - 1, k - 1); }
-```
-
-### Catalan Numbers ($O(1)$)
-Formula: $C_n = \frac{1}{n+1}\binom{2n}{n} = \binom{2n}{n} - \binom{2n}{n-1}$
-Applications: Valid parens seqs of len $2n$, Binary trees w/ $n$ nodes, Dyck paths.
-```cpp
-ll catalan(int n) { // O(1) using precalculated fac/invFac
-    return nCr(2 * n, n) * mod_inv_prime(n + 1, MOD) % MOD;
-}
-```
-
-### Derangements ($O(N)$)
-Recurrence: $D_n = (n - 1)(D_{n-1} + D_{n-2}), \quad D_0 = 1, D_1 = 0$
-```cpp
-vector<ll> derangements(int n) { // O(N) precalculation
-    vector<ll> d(n + 1); d[0] = 1; if (n >= 1) d[1] = 0;
-    for (int i = 2; i <= n; ++i) d[i] = (1LL * (i - 1) * (d[i - 1] + d[i - 2])) % MOD;
-    return d;
-}
-```
-
-### Pigeonhole Principle & Inclusion-Exclusion ($O(2^M \cdot M)$)
-* **Pigeonhole Principle**: If $N$ items put in $K$ boxes, $\ge 1$ box has $\lceil N/K \rceil$ items ($O(1)$).
-* **Inclusion-Exclusion**: $|A_1 \cup \dots \cup A_n| = \sum |A_i| - \sum |A_i \cap A_j| + \sum |A_i \cap A_j \cap A_k| - \dots$
-
-```cpp
-// Cnt nums in [1, N] div by >= 1 prime in p[]: O(2^M * M)
-ll count_divisible(ll N, const vector<ll>& primes) {
-    int m = primes.size(); ll ans = 0;
-    for (int mask = 1; mask < (1 << m); ++mask) {
-        ll prod = 1; int cnt = 0;
-        for (int i = 0; i < m; ++i) if ((mask >> i) & 1) {
-            ++cnt; if (prod > N / primes[i]) { prod = N + 1; break; }
-            prod *= primes[i];
-        }
-        ans += (cnt & 1 ? 1 : -1) * (N / prod);
-    }
-    return ans;
-}
-
-// Lucas' Theorem: nCr % p for large n, r when p is prime: O(p + log_p n)
-ll lucas_nCr(ll n, ll r, ll p) {
-    if (r == 0) return 1;
-    ll ni = n % p, ri = r % p;
-    if (ri > ni) return 0;
-    return lucas_nCr(n / p, r / p, p) * nCr(ni, ri) % p;
-}
-```
-
----
-
-# 7. 2D Computational Geometry I: Points & Vectors
-
-### Complex Numbers as 2D Vector Primitives ($O(1)$)
-```cpp
-#include <complex>
-using ld = double; // or long double
-typedef complex<ld> pt;
-#define x real()
-#define y imag()
-
-// Dot & Cross Prods: O(1)
-ld dot(pt a, pt b) { return (conj(a) * b).x; }
-ld cross(pt a, pt b) { return (conj(a) * b).y; }
-
-// Dist & Norm: O(1)
-ld dist(pt a, pt b) { return abs(a - b); }
-ld distSq(pt a, pt b) { return norm(a - b); } // (a.x-b.x)^2 + (a.y-b.y)^2
-
-// Rotations & Angles: O(1)
-pt rotate(pt p, ld angle) { return p * polar((ld)1.0, angle); }
-pt rotate_around(pt p, pt pivot, ld angle) {
-    return pivot + (p - pivot) * polar((ld)1.0, angle);
-}
-ld angle(pt p) { return arg(p); } // rad in [-pi, pi]
-```
-
-### Orientation Test (CCW / Turn Direction) ($O(1)$)
-* $\text{cross}(b - a, c - a) > 0$ : $c$ is **LEFT** of line $ab$ (CCW turn)
-* $\text{cross}(b - a, c - a) < 0$ : $c$ is **RIGHT** of line $ab$ (CW turn)
-* $\text{cross}(b - a, c - a) = 0$ : $a, b, c$ are **collinear**
-
-```cpp
-int ccw(pt a, pt b, pt c) { // O(1)
-    ld cp = cross(b - a, c - a);
-    if (abs(cp) < 1e-9) return 0; // collinear
-    return (cp > 0) ? 1 : -1;     // +1: CCW (left), -1: CW (right)
-}
-```
-
-### Point Projection & Reflection ($O(1)$)
-```cpp
-// Project pt p onto line (a, b): O(1)
-pt project_on_line(pt p, pt a, pt b) {
-    return a + (b - a) * dot(p - a, b - a) / norm(b - a);
-}
-
-// Reflect pt p across line (a, b): O(1)
-pt reflect_across_line(pt p, pt a, pt b) {
-    return a + conj((p - a) / (b - a)) * (b - a);
-}
-
-// Dist pt p to line (a, b): O(1)
-ld dist_point_to_line(pt p, pt a, pt b) {
-    return abs(cross(b - a, p - a)) / abs(b - a);
-}
-
-// Dist pt p to seg ab: O(1)
-ld dist_point_to_segment(pt p, pt a, pt b) {
-    if (dot(p - a, b - a) <= 0) return abs(p - a);
-    if (dot(p - b, a - b) <= 0) return abs(p - b);
-    return dist_point_to_line(p, a, b);
-}
-
-// Convex Hull (Monotone Chain) in O(N log N):
-vector<pt> convex_hull(vector<pt> pts) {
-    int n = pts.size(), k = 0; if (n <= 2) return pts;
-    vector<pt> h(2 * n);
-    sort(all(pts), [](pt a, pt b) { return a.x != b.x ? a.x < b.x : a.y < b.y; });
-    for (int i = 0; i < n; ++i) {
-        while (k >= 2 && ccw(h[k - 2], h[k - 1], pts[i]) <= 0) k--;
-        h[k++] = pts[i];
-    }
-    for (int i = n - 2, t = k + 1; i >= 0; --i) {
-        while (k >= t && ccw(h[k - 2], h[k - 1], pts[i]) <= 0) k--;
-        h[k++] = pts[i];
-    }
-    h.resize(k - 1);
-    return h;
-}
-```
-
----
-
-# 8. Sorting, Comparators & Coordinate Compression
+# 5. Sorting, Comparators & Coordinate Compression
 
 ### STL Sorting Functions ($O(N \log N)$)
 ```cpp
@@ -691,7 +448,7 @@ ull pollard(ull n) {
 
 ---
 
-# 9. Search: Binary & Ternary Search
+# 6. Search: Binary & Ternary Search
 
 ### STL Binary Search & Bounds Idioms ($O(\log N)$)
 Array/vector must be sorted:
@@ -757,84 +514,87 @@ double ternarySearchDouble(double l, double r) {
 
 ---
 
-# 10. Number Theory II: Modular Arithmetic & GCD
+# 7. Number Theory I: Primes, Divisors & Factorization
 
-### Euclidean Algorithm & Extended GCD ($O(\log(\min(a, b)))$)
+### First 25 Primes ($< 100$) & Classic Sieve ($O(N \log \log N)$)
 ```cpp
-// C++17 built-ins (<numeric>): gcd(a, b) & lcm(a, b) in O(log(min(a, b)))
-// Legacy GCC (< C++17): __gcd(a, b)
-inline __int128 gcd128(__int128 a, __int128 b) { return b == 0 ? a : gcd128(b, a % b); }
-
-// ExtGCD (not in STL): finds x, y s.t. a*x + b*y = gcd(a, b) in O(log(min(a, b)))
-ll extgcd(ll a, ll b, ll &x, ll &y) {
-    if (b == 0) { x = 1; y = 0; return a; }
-    ll x1, y1, g = extgcd(b, a % b, x1, y1);
-    x = y1; y = x1 - y1 * (a / b);
-    return g;
+// 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
+vector<bool> is_prime(MAXN + 1, true); vector<int> primes;
+void sieve_of_eratosthenes(int n) {
+    is_prime[0] = is_prime[1] = false;
+    for (int p = 2; p * p <= n; ++p)
+        if (is_prime[p]) for (int i = p * p; i <= n; i += p) is_prime[i] = false;
+    for (int p = 2; p <= n; ++p) if (is_prime[p]) primes.push_back(p);
 }
 ```
 
-### Modular Arithmetic & Inverses ($O(\log(\text{exp}))$ / $O(\log(\text{MOD}))$)
-$$\begin{aligned}
-(a + b) \bmod m &= ((a \bmod m) + (b \bmod m)) \bmod m \quad \mid \quad (a \times b) \bmod m = ((a \bmod m) \times (b \bmod m)) \bmod m \\
-(a - b) \bmod m &= ((a \bmod m) - (b \bmod m) + m) \bmod m \quad \mid \quad (a / b) \bmod m = (a \times b^{-1}) \bmod m \quad (\gcd(b, m) = 1)
-\end{aligned}$$
-
+### Deterministic Miller-Rabin for 64-bit Integers ($O(K \log^3 n), K=12$) <span class="badge-safe">64-BIT SAFE</span>
 ```cpp
-ll mod_exp(ll base, ll exp, ll mod) { // O(log exp)
-    ll res = 1; base %= mod;
-    while (exp > 0) {
-        if (exp & 1) res = (__int128)res * base % mod;
-        base = (__int128)base * base % mod; exp >>= 1;
+inline ull mulmod(ull a, ull b, ull m) { return (ull)((__int128)a * b % m); }
+inline ull modpow(ull a, ull d, ull m) {
+    ull r = 1; a %= m; while (d) { if (d & 1) r = mulmod(r, a, m); a = mulmod(a, a, m); d >>= 1; }
+    return r;
+}
+inline bool isPrime64(ull n) { // O(12 * log n) deterministic (n < 2^64)
+    if (n < 2) return false;
+    for (ull p : {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37}) if (n % p == 0) return n == p;
+    ull d = n - 1; int r = 0; while ((d & 1) == 0) { d >>= 1; ++r; }
+    for (ull a : {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37}) {
+        if (a >= n) continue;
+        ull x = modpow(a, d, n); if (x == 1 || x == n - 1) continue;
+        bool comp = true;
+        for (int i = 0; i < r - 1; ++i) { x = mulmod(x, x, n); if (x == n - 1) { comp = false; break; } }
+        if (comp) return false;
     }
-    return res;
+    return true;
 }
-// Mod inv (MOD prime: Fermat | coprime: ExtGCD): O(log MOD)
-ll mod_inv_prime(ll b, ll mod) { return mod_exp(b, mod - 2, mod); }
-ll mod_inv_general(ll a, ll mod) {
-    ll x, y, g = extgcd(a, mod, x, y);
-    return g == 1 ? (x % mod + mod) % mod : -1;
-}
+inline ull nextPrime(ull n) { if (n < 2) return 2; ++n; if (n > 2 && (n & 1) == 0) ++n; while (!isPrime64(n)) n += 2; return n; }
+inline ull prevPrime(ull n) { if (n <= 2) return 0; if (n == 3) return 2; --n; if ((n & 1) == 0) --n; while (n >= 2 && !isPrime64(n)) n -= 2; return n; }
 ```
 
-### Euler's Totient $\phi(n)$, Segmented Sieve & CRT
+### Linear Sieve (SPF), Factorization & Divisors ($O(N)$ / $O(\log N)$ / $O(\sqrt{N})$)
 ```cpp
-ll phi(ll n) { // Cnt nums in [1, n] coprime to n: O(sqrt(n))
-    ll res = n;
-    for (ll p = 2; p * p <= n; ++p) {
-        if (n % p == 0) { while (n % p == 0) n /= p; res -= res / p; }
+const int MAXP = 1e7; vector<int> primes, spf(MAXP + 1);
+void linear_sieve(int n = MAXP) { // O(N) build SPF & primes array
+    for (int i = 2; i <= n; ++i) {
+        if (spf[i] == 0) { spf[i] = i; primes.push_back(i); }
+        for (int p : primes) { if (p > spf[i] || (ll)i * p > n) break; spf[i * p] = p; }
     }
-    if (n > 1) res -= res / n;
-    return res;
 }
-
-// Primes in [L, R]: O((R - L + 1) log log R + sqrt(R))
-vector<ll> segmentedSieve(ll L, ll R) {
-    ll lim = sqrt(R); vector<bool> mark(lim + 1, true); vector<ll> primes;
-    for (ll i = 2; i <= lim; ++i) if (mark[i]) { primes.push_back(i); for (ll j = i * i; j <= lim; j += i) mark[j] = false; }
-    vector<bool> is_p(R - L + 1, true);
-    for (ll p : primes) for (ll j = max(p * p, (L + p - 1) / p * p); j <= R; j += p) is_p[j - L] = false;
-    if (L == 1) is_p[0] = false;
-    vector<ll> res;
-    for (ll i = L; i <= R; ++i) if (is_p[i - L]) res.push_back(i);
-    return res;
+// 1. O(log n) SPF fact | 2. O(primes) sieve fact | 3. O(sqrt(n)) standalone fact:
+vector<pair<int, int>> factorize_spf(int x) {
+    vector<pair<int, int>> f;
+    while (x > 1) { int p = spf[x], c = 0; while (x % p == 0) { x /= p; ++c; } f.push_back({p, c}); }
+    return f;
 }
-
-// Chinese Remainder Theorem (CRT) for coprime moduli: O(K log(prod))
-ll crt(const vector<ll>& num, const vector<ll>& rem) {
-    ll prod = 1, ans = 0;
-    for (ll n : num) prod *= n;
-    for (int i = 0; i < sz(num); ++i) {
-        ll pp = prod / num[i];
-        ans = (ans + rem[i] * mod_inv_general(pp, num[i]) % prod * pp) % prod;
+vector<pair<ll, int>> factorize_sieve(ll n, const vector<int>& pms) {
+    vector<pair<ll, int>> f;
+    for (int p : pms) {
+        if (1LL * p * p > n) break;
+        if (n % p == 0) { int c = 0; while (n % p == 0) { n /= p; ++c; } f.push_back({p, c}); }
     }
-    return (ans + prod) % prod;
+    if (n > 1) f.push_back({n, 1}); return f;
+}
+vector<pair<ll, int>> factorize(ll n) {
+    vector<pair<ll, int>> f;
+    for (ll d = 2; d * d <= n; ++d)
+        if (n % d == 0) { int c = 0; while (n % d == 0) { n /= d; ++c; } f.push_back({d, c}); }
+    if (n > 1) f.push_back({n, 1}); return f;
+}
+// Generate all divisors in O(d(N)) | Sum of Divisors Sieve in O(N log N):
+void get_divisors(int idx, ll cur, const vector<pair<int, int>>& f, vector<ll>& divs) {
+    if (idx == sz(f)) { divs.push_back(cur); return; }
+    for (int i = 0; i <= f[idx].second; ++i) { get_divisors(idx + 1, cur, f, divs); cur *= f[idx].first; }
+}
+vector<ll> sum_divisors_sieve(int n) {
+    vector<ll> s(n + 1, 0); for (int i = 1; i <= n; ++i) for (int j = i; j <= n; j += i) s[j] += i;
+    return s;
 }
 ```
 
 ---
 
-# 11. Range Queries & Prefix Sums
+# 8. Range Queries & Prefix Sums
 
 ### 1D & 2D Prefix Sums ($O(1)$ Query)
 ```cpp
@@ -911,7 +671,7 @@ struct SqrtDecomp {
 
 ---
 
-# 12. Two Pointers & Sliding Window
+# 9. Two Pointers & Sliding Window
 
 ### Two Pointers on Sorted Array ($O(N)$)
 ```cpp
@@ -984,72 +744,7 @@ vector<int> slidingWindowMin(const vector<int>& a, int k) {
 
 ---
 
-# 13. 2-SAT & Segment Tree
-
-### 2-SAT via Implication Graph & SCC ($O(N + M)$)
-```cpp
-// Var i in [0,N): lit 2i = i is TRUE, lit 2i+1 = i is FALSE. Kosaraju-style 2-pass SCC: O(N+M)
-struct TwoSat {
-    int N; vector<int> order, comp; vector<vector<int>> adj, rev; vector<bool> used, assignment;
-    TwoSat(int n) : N(2 * n), adj(N), rev(N), used(N), comp(N, -1), assignment(n, false) {}
-
-    void dfs1(int u) { // O(N+M): topological order by finish time
-        used[u] = true;
-        for (int v : adj[u]) if (!used[v]) dfs1(v);
-        order.push_back(u);
-    }
-    void dfs2(int u, int id) { // O(N+M): assigns SCC id on reverse graph
-        comp[u] = id;
-        for (int v : rev[u]) if (comp[v] == -1) dfs2(v, id);
-    }
-    // Clause (a == na) OR (b == nb); na/nb: whether the literal is negated: O(1)
-    void addClause(int a, bool na, int b, bool nb) {
-        a = 2 * a ^ na; b = 2 * b ^ nb;
-        int notA = a ^ 1, notB = b ^ 1;
-        adj[notA].push_back(b); adj[notB].push_back(a);
-        rev[b].push_back(notA); rev[a].push_back(notB);
-    }
-    bool solve() { // O(N+M): false if unsatisfiable, else fills assignment[]
-        used.assign(N, false); order.clear();
-        for (int i = 0; i < N; ++i) if (!used[i]) dfs1(i);
-        comp.assign(N, -1);
-        for (int i = 0, j = 0; i < N; ++i) {
-            int u = order[N - i - 1];
-            if (comp[u] == -1) dfs2(u, j++);
-        }
-        for (int i = 0; i < N; i += 2) {
-            if (comp[i] == comp[i + 1]) return false; // x == not x: contradiction
-            assignment[i / 2] = comp[i] > comp[i + 1];
-        }
-        return true;
-    }
-};
-// Force var i to TRUE: addClause(i, false, i, false)  (i.e. "i OR i")
-```
-
-### Iterative Segment Tree (Bottom-Up, No Recursion) ($O(N)$ Build, $O(\log N)$ Upd/Query)
-```cpp
-// Point update + range query (sum by default; change comb() for min/max/gcd): O(log N)
-template <class T> struct Seg {
-    int n; vector<T> seg; const T ID = 0; // ID: identity elem (0 for sum, INF for min...)
-    T comb(T a, T b) { return a + b; }
-    void init(int _n) { n = _n; seg.assign(2 * n, ID); } // O(N)
-    void pull(int p) { seg[p] = comb(seg[2 * p], seg[2 * p + 1]); }
-    void upd(int p, T val) { for (seg[p += n] = val; p /= 2; ) pull(p); } // O(log N)
-    T query(int l, int r) { // O(log N): [l, r] 0-idx inclusive
-        T ra = ID, rb = ID;
-        for (l += n, r += n + 1; l < r; l /= 2, r /= 2) {
-            if (l & 1) ra = comb(ra, seg[l++]);
-            if (r & 1) rb = comb(seg[--r], rb);
-        }
-        return comb(ra, rb);
-    }
-};
-```
-
----
-
-# 14. Non-Linear Structures & STL Algorithms
+# 10. Non-Linear Structures & STL Algorithms
 
 ### `std::set`, `std::multiset` & `std::map` ($O(\log N)$)
 * `set`: ordered, unique, $O(\log N)$ insert/erase/find
@@ -1083,10 +778,10 @@ auto cmp = [](const pair<int, int>& a, const pair<int, int>& b) { return a.first
 priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> custom_pq(cmp);
 ```
 
-### Hash Tables: `map` vs `unordered_map` vs `gp_hash_table` ($O(1)$ avg)
-* <span class="badge-safe">SAFE</span> `map`: $O(\log N)$ guaranteed (RB-Tree), ordered keys.
-* <span class="badge-warn">CAVEAT</span> `unordered_map`: $O(1)$ avg, but $O(N)$ worst-case (vulnerable to anti-hash hacks on Codeforces).
-* <span class="badge-safe">FAST</span> `gp_hash_table`: Open-addressing, $3\times\text{--}5\times$ faster than `unordered_map`.
+### Hash Tables: `map` vs `unordered_map`/`unordered_set` vs `gp_hash_table` ($O(1)$ avg)
+* <span class="badge-safe">SAFE</span> `map`/`set`: $O(\log N)$ guaranteed (RB-Tree), ordered keys.
+* <span class="badge-warn">CAVEAT</span> `unordered_map`/`unordered_set`: $O(1)$ avg, but $O(N)$ worst-case (vulnerable to anti-hash hacks on Codeforces).
+* <span class="badge-safe">FAST</span> `gp_hash_table`: Open-addressing, $3\times\text{--}5\times$ faster than `unordered_map` (use `null_type` as the value to get a set: `gp_hash_table<int, null_type>`).
 
 ```cpp
 // Custom Safe Hash (prevents O(N) worst-case hacks on CF): O(1)
@@ -1104,6 +799,8 @@ struct custom_hash {
     }
 };
 // Usage: gp_hash_table<ll, int, custom_hash> safe_map; // O(1) avg
+
+unordered_set<int> us; us.insert(5); us.erase(5); if (us.count(5)) {} // O(1) avg, same anti-hash caveat as unordered_map
 ```
 
 ### Useful `<numeric>` & `<algorithm>` Functions ($O(N)$)
@@ -1125,82 +822,166 @@ reverse(all(v)); rotate(v.begin(), v.begin() + k, v.end()); // O(N)
 
 ---
 
-# 15. 2D Computational Geometry II: Polygons & Lines
+# 11. Combinatorics & Counting
 
-### Line-Line Intersection & Segment Intersection ($O(1)$)
+### Factorials & Binomial Coefficients ($O(N)$ Prep, $O(1)$ Query)
+$$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$
+
 ```cpp
-// Intersect line (a, b) & line (c, d): O(1)
-pt line_intersection(pt a, pt b, pt c, pt d) {
-    ld c1 = cross(c - a, b - a), c2 = cross(d - a, b - a);
-    return (c1 * d - c2 * c) / (c1 - c2); // assumes lines not parallel
+const int MAXC = 1e6;
+const ll MOD = 1e9 + 7;
+ll fac[MAXC + 1], invFac[MAXC + 1];
+
+void init_comb(int n = MAXC) { // O(N) precalc
+    fac[0] = 1;
+    for (int i = 1; i <= n; ++i) fac[i] = fac[i - 1] * i % MOD;
+    invFac[n] = mod_exp(fac[n], MOD - 2, MOD);
+    for (int i = n - 1; i >= 0; --i) invFac[i] = invFac[i + 1] * (i + 1) % MOD;
 }
 
-// Check pt q on seg pr (collinear): O(1)
-bool onSegment(pt p, pt q, pt r) {
-    return q.x <= max(p.x, r.x) && q.x >= min(p.x, r.x) &&
-           q.y <= max(p.y, r.y) && q.y >= min(p.y, r.y);
+ll nCr(int n, int r) { // O(1) query
+    if (r < 0 || r > n) return 0;
+    return fac[n] * invFac[r] % MOD * invFac[n - r] % MOD;
 }
 
-// Check seg p1q1 intersects seg p2q2: O(1)
-bool segmentsIntersect(pt p1, pt q1, pt p2, pt q2) {
-    int o1 = ccw(p1, q1, p2), o2 = ccw(p1, q1, q2);
-    int o3 = ccw(p2, q2, p1), o4 = ccw(p2, q2, q1);
-    if (o1 != o2 && o3 != o4) return true;
-    if (o1 == 0 && onSegment(p1, p2, q1)) return true;
-    if (o2 == 0 && onSegment(p1, q2, q1)) return true;
-    if (o3 == 0 && onSegment(p2, p1, q2)) return true;
-    if (o4 == 0 && onSegment(p2, q1, q2)) return true;
-    return false;
+ll nPr(int n, int r) { // O(1) query
+    if (r < 0 || r > n) return 0;
+    return fac[n] * invFac[n - r] % MOD;
+}
+
+// Stars & Bars: n identical items into k distinct bins: O(1)
+ll stars_and_bars(int n, int k) { return nCr(n + k - 1, k - 1); }
+```
+
+### Catalan Numbers ($O(1)$)
+Formula: $C_n = \frac{1}{n+1}\binom{2n}{n} = \binom{2n}{n} - \binom{2n}{n-1}$
+Applications: Valid parens seqs of len $2n$, Binary trees w/ $n$ nodes, Dyck paths.
+```cpp
+ll catalan(int n) { // O(1) using precalculated fac/invFac
+    return nCr(2 * n, n) * mod_inv_prime(n + 1, MOD) % MOD;
 }
 ```
 
-### Polygon Area (Shoelace Formula) ($O(N)$)
-$$\text{Area} = \frac{1}{2} \left| \sum_{i=0}^{n-1} (x_i y_{i+1} - x_{i+1} y_i) \right|$$
+### Derangements ($O(N)$)
+Recurrence: $D_n = (n - 1)(D_{n-1} + D_{n-2}), \quad D_0 = 1, D_1 = 0$
 ```cpp
-// O(N) polygon area:
-ld polygonArea(const vector<pt>& p) {
-    ld area = 0.0;
-    int n = p.size();
-    for (int i = 0; i < n; ++i) {
-        area += cross(p[i], p[(i + 1) % n]);
-    }
-    return abs(area) / 2.0;
+vector<ll> derangements(int n) { // O(N) precalculation
+    vector<ll> d(n + 1); d[0] = 1; if (n >= 1) d[1] = 0;
+    for (int i = 2; i <= n; ++i) d[i] = (1LL * (i - 1) * (d[i - 1] + d[i - 2])) % MOD;
+    return d;
 }
 ```
 
-### Pick's Theorem & Point-in-Polygon ($O(N)$)
-* **Pick's Theorem** (for lattice polygons with integer coordinates):
-$$\text{Area} = I + \frac{B}{2} - 1 \implies I = \text{Area} - \frac{B}{2} + 1$$
-where $I$ = interior lattice points, $B$ = boundary lattice points ($O(N)$).
-Boundary points between $(x_1, y_1)$ and $(x_2, y_2)$: $B = \gcd(|x_2 - x_1|, |y_2 - y_1|)$.
+### Pigeonhole Principle & Inclusion-Exclusion ($O(2^M \cdot M)$)
+* **Pigeonhole Principle**: If $N$ items put in $K$ boxes, $\ge 1$ box has $\lceil N/K \rceil$ items ($O(1)$).
+* **Inclusion-Exclusion**: $|A_1 \cup \dots \cup A_n| = \sum |A_i| - \sum |A_i \cap A_j| + \sum |A_i \cap A_j \cap A_k| - \dots$
 
 ```cpp
-// Pt in Poly (Ray-Cast): 1 (in), 0 (out), -1 (border) in O(N)
-int pointInPolygon(const vector<pt>& p, pt q) {
-    int n = p.size(); bool inside = false;
-    for (int i = 0; i < n; ++i) {
-        pt a = p[i], b = p[(i + 1) % n];
-        if (ccw(a, b, q) == 0 && onSegment(a, q, b)) return -1; // on border
-        if ((a.y > q.y) != (b.y > q.y)) {
-            ld x_inter = a.x + (q.y - a.y) * (b.x - a.x) / (b.y - a.y);
-            if (q.x < x_inter) inside = !inside;
+// Cnt nums in [1, N] div by >= 1 prime in p[]: O(2^M * M)
+ll count_divisible(ll N, const vector<ll>& primes) {
+    int m = primes.size(); ll ans = 0;
+    for (int mask = 1; mask < (1 << m); ++mask) {
+        ll prod = 1; int cnt = 0;
+        for (int i = 0; i < m; ++i) if ((mask >> i) & 1) {
+            ++cnt; if (prod > N / primes[i]) { prod = N + 1; break; }
+            prod *= primes[i];
         }
+        ans += (cnt & 1 ? 1 : -1) * (N / prod);
     }
-    return inside ? 1 : 0;
+    return ans;
 }
 
-// 3-Point Circumcircle (Center & Radius) in O(1):
-pair<pt, ld> circumcircle(pt a, pt b, pt c) {
-    pt d = (a - b) * pt(0, 1), e = (a - c) * pt(0, 1);
-    pt m1 = (a + b) / 2.0, m2 = (a + c) / 2.0;
-    pt center = line_intersection(m1, m1 + d, m2, m2 + e);
-    return {center, abs(a - center)};
+// Lucas' Theorem: nCr % p for large n, r when p is prime: O(p + log_p n)
+ll lucas_nCr(ll n, ll r, ll p) {
+    if (r == 0) return 1;
+    ll ni = n % p, ri = r % p;
+    if (ri > ni) return 0;
+    return lucas_nCr(n / p, r / p, p) * nCr(ni, ri) % p;
 }
 ```
 
 ---
 
-# 16. Linear Structures: Vector, Deque, Stack, Queue
+# 12. Number Theory II: Modular Arithmetic & GCD
+
+### Euclidean Algorithm & Extended GCD ($O(\log(\min(a, b)))$)
+* <span class="badge-safe">SAFE</span> `std::gcd`/`std::lcm` (C++17, `<numeric>`): always returns non-negative, regardless of operand signs.
+* <span class="badge-warn">CAVEAT</span> `__gcd(a, b)`: non-standard GCC builtin (`<bits/stl_algobase.h>`), handles $0$ fine but does **not** normalize sign — can return negative (e.g. `__gcd(-6, 4) == -2`).
+
+```cpp
+// Prefer std::gcd/std::lcm (C++17); __gcd is a GCC extension that can return negative results
+inline __int128 gcd128(__int128 a, __int128 b) { return b == 0 ? a : gcd128(b, a % b); }
+
+// ExtGCD (not in STL): finds x, y s.t. a*x + b*y = gcd(a, b) in O(log(min(a, b)))
+ll extgcd(ll a, ll b, ll &x, ll &y) {
+    if (b == 0) { x = 1; y = 0; return a; }
+    ll x1, y1, g = extgcd(b, a % b, x1, y1);
+    x = y1; y = x1 - y1 * (a / b);
+    return g;
+}
+```
+
+### Modular Arithmetic & Inverses ($O(\log(\text{exp}))$ / $O(\log(\text{MOD}))$)
+$$\begin{aligned}
+(a + b) \bmod m &= ((a \bmod m) + (b \bmod m)) \bmod m \quad \mid \quad (a \times b) \bmod m = ((a \bmod m) \times (b \bmod m)) \bmod m \\
+(a - b) \bmod m &= ((a \bmod m) - (b \bmod m) + m) \bmod m \quad \mid \quad (a / b) \bmod m = (a \times b^{-1}) \bmod m \quad (\gcd(b, m) = 1)
+\end{aligned}$$
+
+```cpp
+ll mod_exp(ll base, ll exp, ll mod) { // O(log exp)
+    ll res = 1; base %= mod;
+    while (exp > 0) {
+        if (exp & 1) res = (__int128)res * base % mod;
+        base = (__int128)base * base % mod; exp >>= 1;
+    }
+    return res;
+}
+// Mod inv (MOD prime: Fermat | coprime: ExtGCD): O(log MOD)
+ll mod_inv_prime(ll b, ll mod) { return mod_exp(b, mod - 2, mod); }
+ll mod_inv_general(ll a, ll mod) {
+    ll x, y, g = extgcd(a, mod, x, y);
+    return g == 1 ? (x % mod + mod) % mod : -1;
+}
+```
+
+### Euler's Totient $\phi(n)$, Segmented Sieve & CRT
+```cpp
+ll phi(ll n) { // Cnt nums in [1, n] coprime to n: O(sqrt(n))
+    ll res = n;
+    for (ll p = 2; p * p <= n; ++p) {
+        if (n % p == 0) { while (n % p == 0) n /= p; res -= res / p; }
+    }
+    if (n > 1) res -= res / n;
+    return res;
+}
+
+// Primes in [L, R]: O((R - L + 1) log log R + sqrt(R))
+vector<ll> segmentedSieve(ll L, ll R) {
+    ll lim = sqrt(R); vector<bool> mark(lim + 1, true); vector<ll> primes;
+    for (ll i = 2; i <= lim; ++i) if (mark[i]) { primes.push_back(i); for (ll j = i * i; j <= lim; j += i) mark[j] = false; }
+    vector<bool> is_p(R - L + 1, true);
+    for (ll p : primes) for (ll j = max(p * p, (L + p - 1) / p * p); j <= R; j += p) is_p[j - L] = false;
+    if (L == 1) is_p[0] = false;
+    vector<ll> res;
+    for (ll i = L; i <= R; ++i) if (is_p[i - L]) res.push_back(i);
+    return res;
+}
+
+// Chinese Remainder Theorem (CRT) for coprime moduli: O(K log(prod))
+ll crt(const vector<ll>& num, const vector<ll>& rem) {
+    ll prod = 1, ans = 0;
+    for (ll n : num) prod *= n;
+    for (int i = 0; i < sz(num); ++i) {
+        ll pp = prod / num[i];
+        ans = (ans + rem[i] * mod_inv_general(pp, num[i]) % prod * pp) % prod;
+    }
+    return (ans + prod) % prod;
+}
+```
+
+---
+
+# 13. Linear Structures: Vector, Deque, Stack, Queue
 
 ### `std::vector` & 2D Matrices ($O(1)$ amortized)
 ```cpp
@@ -1283,7 +1064,7 @@ vector<int> z_function(const string& s) {
 
 ---
 
-# 17. Graph Traversals: DFS, BFS & Flood Fill
+# 14. Graph Traversals: DFS, BFS & Flood Fill
 
 ### Graph Representations & DFS / Bipartite Check ($O(V + E)$)
 ```cpp
@@ -1364,7 +1145,7 @@ struct Fenwick {
 
 ---
 
-# 18. Shortest Paths, DSU & Minimum Spanning Tree
+# 15. Shortest Paths, DSU & Minimum Spanning Tree
 
 ### Dijkstra's Shortest Path ($O((V + E) \log V)$)
 ```cpp
@@ -1450,7 +1231,7 @@ struct TernaryNode {
 
 ---
 
-# 19. Hopcroft-Karp: Maximum Bipartite Matching
+# 16. Hopcroft-Karp: Maximum Bipartite Matching
 
 ### Hopcroft-Karp Algorithm ($O(E\sqrt{V})$)
 ```cpp
@@ -1496,7 +1277,7 @@ struct HopcroftKarp { // 1-idxd; v = left node, u = right node: O(E * sqrt(V))
 
 ---
 
-# 20. Tree Algorithms & Lowest Common Ancestor
+# 17. Tree Algorithms & Lowest Common Ancestor
 
 ### Tree Diameter (Longest Path in a Tree) $O(N)$
 Method: 2-pass BFS/DFS to find furthest endpoints in $O(N)$.
@@ -1575,7 +1356,7 @@ void euler_tour(int u, int p = 0) {
 
 ---
 
-# 21. Dynamic Programming I: Classic Paradigms
+# 18. Dynamic Programming I: Classic Paradigms
 
 ### Fibonacci (Top-Down Memoization $O(N)$ vs Bottom-Up $O(1)$ Space)
 ```cpp
@@ -1650,7 +1431,7 @@ ll gridPaths(const vector<vector<int>>& g, ll MOD = 1e9 + 7) {
 
 ---
 
-# 22. Dynamic Programming II: Sequences & Substrings
+# 19. Dynamic Programming II: Sequences & Substrings
 
 ### Longest Increasing Subsequence (LIS) in $O(N \log N)$
 ```cpp
@@ -1720,7 +1501,7 @@ ll maxSubarraySum(const vector<ll>& a) {
 
 ---
 
-# 23. Greedy Algorithms & Paradigms
+# 20. Greedy Algorithms & Paradigms
 
 ### Fractional Knapsack (Items can be split) $O(N \log N)$
 Strategy: Sort items by val/wt desc.
@@ -1800,7 +1581,7 @@ ll maxSubmatrixSum(const vector<vector<ll>>& mat) {
 
 ---
 
-# 24. 2D Matrices, Matrix Exponentiation & Game Theory
+# 21. 2D Matrices, Matrix Exponentiation & Game Theory
 
 ### 2D Matrices: Memory Layout, Compass Deltas & In-Place $90^\circ$ Rotation ($O(1)$ / $O(N^2)$)
 ```cpp
@@ -1879,6 +1660,229 @@ struct XorBasis { // linear basis of a set of integers under XOR: O(60) per inse
     bool canForm(ll x) { // O(LOG): true if x is an XOR of some subset of inserted elems
         for (int j = LOG - 1; j >= 0; --j) if ((x >> j) & 1) { if (!basis[j]) return false; x ^= basis[j]; }
         return true;
+    }
+};
+```
+
+---
+
+# 22. 2D Computational Geometry I: Points & Vectors
+
+### Complex Numbers as 2D Vector Primitives ($O(1)$)
+```cpp
+#include <complex>
+using ld = double; // or long double
+typedef complex<ld> pt;
+#define x real()
+#define y imag()
+
+// Dot & Cross Prods: O(1)
+ld dot(pt a, pt b) { return (conj(a) * b).x; }
+ld cross(pt a, pt b) { return (conj(a) * b).y; }
+
+// Dist & Norm: O(1)
+ld dist(pt a, pt b) { return abs(a - b); }
+ld distSq(pt a, pt b) { return norm(a - b); } // (a.x-b.x)^2 + (a.y-b.y)^2
+
+// Rotations & Angles: O(1)
+pt rotate(pt p, ld angle) { return p * polar((ld)1.0, angle); }
+pt rotate_around(pt p, pt pivot, ld angle) {
+    return pivot + (p - pivot) * polar((ld)1.0, angle);
+}
+ld angle(pt p) { return arg(p); } // rad in [-pi, pi]
+```
+
+### Orientation Test (CCW / Turn Direction) ($O(1)$)
+* $\text{cross}(b - a, c - a) > 0$ : $c$ is **LEFT** of line $ab$ (CCW turn)
+* $\text{cross}(b - a, c - a) < 0$ : $c$ is **RIGHT** of line $ab$ (CW turn)
+* $\text{cross}(b - a, c - a) = 0$ : $a, b, c$ are **collinear**
+
+```cpp
+int ccw(pt a, pt b, pt c) { // O(1)
+    ld cp = cross(b - a, c - a);
+    if (abs(cp) < 1e-9) return 0; // collinear
+    return (cp > 0) ? 1 : -1;     // +1: CCW (left), -1: CW (right)
+}
+```
+
+### Point Projection & Reflection ($O(1)$)
+```cpp
+// Project pt p onto line (a, b): O(1)
+pt project_on_line(pt p, pt a, pt b) {
+    return a + (b - a) * dot(p - a, b - a) / norm(b - a);
+}
+
+// Reflect pt p across line (a, b): O(1)
+pt reflect_across_line(pt p, pt a, pt b) {
+    return a + conj((p - a) / (b - a)) * (b - a);
+}
+
+// Dist pt p to line (a, b): O(1)
+ld dist_point_to_line(pt p, pt a, pt b) {
+    return abs(cross(b - a, p - a)) / abs(b - a);
+}
+
+// Dist pt p to seg ab: O(1)
+ld dist_point_to_segment(pt p, pt a, pt b) {
+    if (dot(p - a, b - a) <= 0) return abs(p - a);
+    if (dot(p - b, a - b) <= 0) return abs(p - b);
+    return dist_point_to_line(p, a, b);
+}
+
+// Convex Hull (Monotone Chain) in O(N log N):
+vector<pt> convex_hull(vector<pt> pts) {
+    int n = pts.size(), k = 0; if (n <= 2) return pts;
+    vector<pt> h(2 * n);
+    sort(all(pts), [](pt a, pt b) { return a.x != b.x ? a.x < b.x : a.y < b.y; });
+    for (int i = 0; i < n; ++i) {
+        while (k >= 2 && ccw(h[k - 2], h[k - 1], pts[i]) <= 0) k--;
+        h[k++] = pts[i];
+    }
+    for (int i = n - 2, t = k + 1; i >= 0; --i) {
+        while (k >= t && ccw(h[k - 2], h[k - 1], pts[i]) <= 0) k--;
+        h[k++] = pts[i];
+    }
+    h.resize(k - 1);
+    return h;
+}
+```
+
+---
+
+# 23. 2D Computational Geometry II: Polygons & Lines
+
+### Line-Line Intersection & Segment Intersection ($O(1)$)
+```cpp
+// Intersect line (a, b) & line (c, d): O(1)
+pt line_intersection(pt a, pt b, pt c, pt d) {
+    ld c1 = cross(c - a, b - a), c2 = cross(d - a, b - a);
+    return (c1 * d - c2 * c) / (c1 - c2); // assumes lines not parallel
+}
+
+// Check pt q on seg pr (collinear): O(1)
+bool onSegment(pt p, pt q, pt r) {
+    return q.x <= max(p.x, r.x) && q.x >= min(p.x, r.x) &&
+           q.y <= max(p.y, r.y) && q.y >= min(p.y, r.y);
+}
+
+// Check seg p1q1 intersects seg p2q2: O(1)
+bool segmentsIntersect(pt p1, pt q1, pt p2, pt q2) {
+    int o1 = ccw(p1, q1, p2), o2 = ccw(p1, q1, q2);
+    int o3 = ccw(p2, q2, p1), o4 = ccw(p2, q2, q1);
+    if (o1 != o2 && o3 != o4) return true;
+    if (o1 == 0 && onSegment(p1, p2, q1)) return true;
+    if (o2 == 0 && onSegment(p1, q2, q1)) return true;
+    if (o3 == 0 && onSegment(p2, p1, q2)) return true;
+    if (o4 == 0 && onSegment(p2, q1, q2)) return true;
+    return false;
+}
+```
+
+### Polygon Area (Shoelace Formula) ($O(N)$)
+$$\text{Area} = \frac{1}{2} \left| \sum_{i=0}^{n-1} (x_i y_{i+1} - x_{i+1} y_i) \right|$$
+```cpp
+// O(N) polygon area:
+ld polygonArea(const vector<pt>& p) {
+    ld area = 0.0;
+    int n = p.size();
+    for (int i = 0; i < n; ++i) {
+        area += cross(p[i], p[(i + 1) % n]);
+    }
+    return abs(area) / 2.0;
+}
+```
+
+### Pick's Theorem & Point-in-Polygon ($O(N)$)
+* **Pick's Theorem** (for lattice polygons with integer coordinates):
+$$\text{Area} = I + \frac{B}{2} - 1 \implies I = \text{Area} - \frac{B}{2} + 1$$
+where $I$ = interior lattice points, $B$ = boundary lattice points ($O(N)$).
+Boundary points between $(x_1, y_1)$ and $(x_2, y_2)$: $B = \gcd(|x_2 - x_1|, |y_2 - y_1|)$.
+
+```cpp
+// Pt in Poly (Ray-Cast): 1 (in), 0 (out), -1 (border) in O(N)
+int pointInPolygon(const vector<pt>& p, pt q) {
+    int n = p.size(); bool inside = false;
+    for (int i = 0; i < n; ++i) {
+        pt a = p[i], b = p[(i + 1) % n];
+        if (ccw(a, b, q) == 0 && onSegment(a, q, b)) return -1; // on border
+        if ((a.y > q.y) != (b.y > q.y)) {
+            ld x_inter = a.x + (q.y - a.y) * (b.x - a.x) / (b.y - a.y);
+            if (q.x < x_inter) inside = !inside;
+        }
+    }
+    return inside ? 1 : 0;
+}
+
+// 3-Point Circumcircle (Center & Radius) in O(1):
+pair<pt, ld> circumcircle(pt a, pt b, pt c) {
+    pt d = (a - b) * pt(0, 1), e = (a - c) * pt(0, 1);
+    pt m1 = (a + b) / 2.0, m2 = (a + c) / 2.0;
+    pt center = line_intersection(m1, m1 + d, m2, m2 + e);
+    return {center, abs(a - center)};
+}
+```
+
+---
+
+# 24. 2-SAT & Segment Tree
+
+### 2-SAT via Implication Graph & SCC ($O(N + M)$)
+```cpp
+// Var i in [0,N): lit 2i = i is TRUE, lit 2i+1 = i is FALSE. Kosaraju-style 2-pass SCC: O(N+M)
+struct TwoSat {
+    int N; vector<int> order, comp; vector<vector<int>> adj, rev; vector<bool> used, assignment;
+    TwoSat(int n) : N(2 * n), adj(N), rev(N), used(N), comp(N, -1), assignment(n, false) {}
+
+    void dfs1(int u) { // O(N+M): topological order by finish time
+        used[u] = true;
+        for (int v : adj[u]) if (!used[v]) dfs1(v);
+        order.push_back(u);
+    }
+    void dfs2(int u, int id) { // O(N+M): assigns SCC id on reverse graph
+        comp[u] = id;
+        for (int v : rev[u]) if (comp[v] == -1) dfs2(v, id);
+    }
+    // Clause (a == na) OR (b == nb); na/nb: whether the literal is negated: O(1)
+    void addClause(int a, bool na, int b, bool nb) {
+        a = 2 * a ^ na; b = 2 * b ^ nb;
+        int notA = a ^ 1, notB = b ^ 1;
+        adj[notA].push_back(b); adj[notB].push_back(a);
+        rev[b].push_back(notA); rev[a].push_back(notB);
+    }
+    bool solve() { // O(N+M): false if unsatisfiable, else fills assignment[]
+        used.assign(N, false); order.clear();
+        for (int i = 0; i < N; ++i) if (!used[i]) dfs1(i);
+        comp.assign(N, -1);
+        for (int i = 0, j = 0; i < N; ++i) {
+            int u = order[N - i - 1];
+            if (comp[u] == -1) dfs2(u, j++);
+        }
+        for (int i = 0; i < N; i += 2) {
+            if (comp[i] == comp[i + 1]) return false; // x == not x: contradiction
+            assignment[i / 2] = comp[i] > comp[i + 1];
+        }
+        return true;
+    }
+};
+// Force var i to TRUE: addClause(i, false, i, false)  (i.e. "i OR i")
+```
+
+### Iterative Segment Tree (Bottom-Up, No Recursion) ($O(N)$ Build, $O(\log N)$ Upd/Query)
+```cpp
+// Point update + range query (sum by default; change comb() for min/max/gcd): O(log N)
+template <class T> struct Seg {
+    int n; vector<T> seg; const T ID = 0; // ID: identity elem (0 for sum, INF for min...)
+    T comb(T a, T b) { return a + b; }
+    void init(int _n) { n = _n; seg.assign(2 * n, ID); } // O(N)
+    void pull(int p) { seg[p] = comb(seg[2 * p], seg[2 * p + 1]); }
+    void upd(int p, T val) { for (seg[p += n] = val; p /= 2; ) pull(p); } // O(log N)
+    T query(int l, int r) { // O(log N): [l, r] 0-idx inclusive
+        T ra = ID, rb = ID;
+        for (l += n, r += n + 1; l < r; l /= 2, r /= 2) {
+            if (l & 1) ra = comb(ra, seg[l++]);
+            if (r & 1) rb = comb(seg[--r], rb);
+        }
+        return comb(ra, rb);
     }
 };
 ```
