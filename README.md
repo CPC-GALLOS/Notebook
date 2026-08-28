@@ -1,4 +1,230 @@
-# Notebook
-Γα=Ω5 Team Reference Document / Notebook / Cheat Sheet
+# CPC Gallos Notebook - Team Reference Document (TRD)
 
-Para editar este Notebook solo ocupas de la extensión de [marp](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) instalada dentro de [VScode](https://code.visualstudio.com/Download).
+> **ICPC-Compliant 25-Page Competitive Programming Reference Document (Notebook / Cheat Sheet)**  
+> Maintained by **[CPC Gallos](https://github.com/CPC-GALLOS)** (Club de Programación Competitiva Gallos) @ Universidad Autónoma de Aguascalientes (UAA).
+
+---
+
+## Overview
+
+This repository contains the complete **ICPC Team Reference Document (TRD)** formatted and styled according to the official ICPC World Finals / Regional on-site reference rules.
+
+Built with **[Marp](https://marp.app/)** and a custom CSS theme (`src/us-letter-light.css`), it compiles directly to an ultra-compact, high-density, legible 25-page PDF (reaching 100% of the strict $\le 25$-page single-sided limit).
+
+---
+
+## Preview
+
+<p align="center">
+  <a href="./Notebook-TRD.pdf">
+    <img src="./src/preview.png" alt="Notebook-TRD preview: Table of Contents, Number Theory, and 2D Geometry pages" width="100%">
+  </a>
+</p>
+
+<p align="center">
+  <b><a href="./Notebook-TRD.pdf">📄 View / Download the full 25-page PDF</a></b>
+</p>
+
+---
+
+## ICPC TRD Official Rules & Regulations
+
+> *“Notebooks, also commonly known as cheat sheets, are officially designated as the **Team Reference Document (TRD)** by the ICPC. These are documents that teams may bring to on-site competitions, which can include algorithms, theory, programming language references, code templates, and useful snippets.”*
+> 
+> *(Source: [ICPC World Finals On-Site Registration](https://icpc.global/worldfinals/on-site-registration))*
+
+### The 3 Official ICPC Constraints for TRDs:
+
+1. **25-Page Limit**: Must consist of at most **25 single-sided pages** (Letter or A4 size), numbered in the top-right corner, with the institution name, team name, and document title in the top-left header on every page.
+2. **50 cm Legibility**: All text and illustrations must be clearly readable from a distance of **50 cm** without magnification or zooming.
+3. **Printed Side Only**: Any handwritten notes or corrections must be written exclusively on the printed side of the sheet (the reverse side must remain blank).
+
+---
+
+## Why Exclusively C++?
+
+This Team Reference Document is written **exclusively in C++**. The motivation, benchmarks, and architectural decisions behind this choice are detailed in the CPC Gallos article [**¿Por qué C++?**](https://cpc-gallos.github.io/blog/Por_que_Cpp/):
+
+1. **Universal Support Across Contests**: C++ is universally available across all official competitive programming platforms (ICPC, IOI, Codeforces, AtCoder, CSES).
+2. **Raw Speed & Minimal Memory Overhead**: Compiles directly to native x86/ARM machine code with zero garbage collection or Virtual Machine (JVM) overhead, avoiding the severe execution penalties of Python ($\sim 70\times$ slower) and the heavy memory footprint of Java/Kotlin.
+3. **Standard Template Library (STL) & PBDS**: Out-of-the-box access to highly optimized data structures (`vector`, `deque`, `priority_queue`, `bitset`, `set`, `map`) and GCC extensions like Policy-Based Data Structures (`ordered_set`, `gp_hash_table`).
+4. **Fast I/O & Hardware-Level Bit Intrinsics**: Unsynchronized fast streams (`cin.tie(0)->sync_with_stdio(0)`), compiler intrinsics (`__builtin_popcount`, `__builtin_clz`), and 128-bit integers (`__int128`) ensure routines pass strict $1.0\text{s}$ ICPC time limits ($O(10^8)$ operations/sec).
+
+For full empirical benchmarks (including normalized execution speed, memory footprint, and the Sieve of Eratosthenes benchmark across C, C++, Rust, Java, Kotlin, and Python), see the full article: [https://cpc-gallos.github.io/blog/Por_que_Cpp/](https://cpc-gallos.github.io/blog/Por_que_Cpp/).
+
+---
+
+## Table of Contents & Topic Index
+
+|  Page  | Section                                   | Key Topics & Algorithms                                                                                                                                                                                                        |
+| :----: | :---------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **1**  | **Table of Contents & Index**             | 2-Column Master Index, Golden Rules of Complexity by Constraint ($1.0\text{s} \approx 10^8\text{ ops}$), Memory Budget Rules ($256\text{MB}$ Cap), Primitive Types & Constants, Essential Math Formulas & Pre-Submission Traps |
+| **2**  | **1. C++ Competitive Template & PBDS**    | Fast I/O, optimization pragmas & caveats, `__gnu_pbds` (`ordered_set`, `gp_hash_table`), variadic `dbg(...)` macro, local benchmark timer, standard macros, String Hashing (rolling hash)                                      |
+| **3**  | **2. Limits, I/O & Math Utilities**       | `numeric_limits`, float precision, `getchar_unlocked` fast int I/O, `__int128` fast I/O, float comparison `d_eq`, angle conversions, math functions                                                                            |
+| **4**  | **3. Bit Manipulation & `std::bitset`**   | Bit hacks, GCC built-ins (`__builtin_popcount`, `clz`, `ctz`), fast `int2bin` & `bin2int`, submask iteration $O(3^N)$, `std::bitset` methods, Gosper's Hack $O(\binom{N}{K})$                                                  |
+| **5**  | **4. String Manipulation & Parsing**      | Substrings, find/replace, char $\leftrightarrow$ digit conversions, `stringstream` tokenization, CSV splitting, palindromes, cyclic shifts, KMP $\pi$-function                                                                 |
+| **6**  | **5. Number Theory I: Primes & Fact**     | First 25 primes, deterministic 64-bit Miller-Rabin ($n < 2^{64}$), Linear Sieve / SPF $O(N)$, Factorization $O(\log N)$ & $O(\sqrt{N})$, Divisors $O(d(N))$                                                                    |
+| **7**  | **6. Combinatorics & Counting**           | Factorials & $\binom{n}{r}$ precomputation, Stars & Bars, Catalan numbers, Derangements, Inclusion-Exclusion, Lucas' Theorem                                                                                                   |
+| **8**  | **7. 2D Computational Geometry I**        | `std::complex` vector primitives, dot & cross products, CCW orientation test, point projection & reflection, point-to-line/segment distance, Convex Hull (Monotone Chain) $O(N \log N)$                                        |
+| **9**  | **8. Sorting & Coordinate Comp**          | `sort`, `stable_sort`, `nth_element`, custom struct & lambda comparators, $O(N \log N)$ coordinate compression & Inversion Count (Merge Sort), Pollard's Rho factorization                                                     |
+| **10** | **9. Search: Binary & Ternary Search**    | `lower_bound`/`upper_bound` idioms, BS on answer template, Floating/Continuous Binary Search, Discrete & Continuous Ternary Search                                                                                             |
+| **11** | **10. Number Theory II: Modular Math**    | Extended GCD, Modular exponentiation & inverse (Fermat & ExtGCD), Euler's Totient $\phi(n)$, Segmented Sieve, Chinese Remainder Theorem (CRT)                                                                                  |
+| **12** | **11. Range Queries & Prefix Sums**       | 1D & 2D Prefix Sums ($O(1)$ query), 1D Difference Array ($O(1)$ range update), Sqrt Decomposition $O(\sqrt{N})$, Fenwick Tree (BIT) $O(\log N)$                                                                                |
+| **13** | **12. Two Pointers & Sliding Window**     | Two-sum sorted, variable sliding window (at most $K$ distinct), Monotonic Deque sliding window minimum $O(N)$                                                                                                                  |
+| **14** | **13. 2-SAT & Segment Tree**              | 2-SAT via implication graph & Kosaraju SCC (`TwoSat`, `addClause`, `solve`), Iterative Segment Tree (bottom-up point update & range query)                                                                                     |
+| **15** | **14. Non-Linear Structs & Algorithms**   | `std::set`, `std::multiset` erase, `std::map`, `priority_queue`, `map` vs `unordered_map` vs `gp_hash_table` Big-O, `custom_hash` struct, `<numeric>` & `<algorithm>`                                                          |
+| **16** | **15. 2D Computational Geometry II**      | Line-line & segment-segment intersection, Polygon Area (Shoelace Formula), Pick's Theorem, Point-in-Polygon (Ray-Casting), 3-Point Circumcircle $O(1)$                                                                         |
+| **17** | **16. Linear Structures & Stack/Queue**   | `std::vector`, `std::deque`, `std::stack`, `std::queue`, Monotonic Stack (NGE & Largest Rectangle in Histogram $O(N)$), circular array cyclic traversal, Z-Function pattern matching                                           |
+| **18** | **17. Graph Traversals: DFS, BFS**        | Graph representations, DFS, Bipartite check (2-coloring), BFS unweighted shortest path, 2D Grid Flood Fill, Topological Sort (Kahn's)                                                                                          |
+| **19** | **18. Shortest Paths, DSU & MST**         | Dijkstra $O((V+E)\log V)$, DSU (rank & size), Kruskal's MST $O(E \log E)$, Floyd-Warshall $O(V^3)$, Bellman-Ford & Negative Cycles $O(VE)$                                                                                     |
+| **20** | **19. Hopcroft-Karp Bipartite Matching**  | Maximum bipartite matching via layered BFS + augmenting-path DFS, $O(E\sqrt{V})$                                                                                                                                               |
+| **21** | **20. Tree Algorithms & LCA**             | 2-pass BFS Tree Diameter $O(N)$, Subtree sizes & depths, Lowest Common Ancestor (Binary Lifting) $O(N \log N)$ prep / $O(\log N)$ query, Euler Tour Technique $O(N)$                                                           |
+| **22** | **21. Dynamic Programming I: Classic**    | Fibonacci (Top-down & Bottom-up $O(1)$ space), 0/1 & Unbounded Knapsack (1D space-optimized), Coin Change (min coins & ways), Grid Paths w/ obstacles                                                                          |
+| **23** | **22. Dynamic Programming II: Sequences** | Longest Increasing Subsequence (LIS) in $O(N \log N)$ + reconstruction, LCS $O(NM)$ + reconstruction, Kadane's algorithm                                                                                                       |
+| **24** | **23. Greedy Algorithms & Paradigms**     | Fractional Knapsack $O(N \log N)$, Interval Scheduling / Activity Selection, Canonical coin change, 2D Kadane / Maximum Submatrix Sum $O(R^2 C)$                                                                               |
+| **25** | **24. Matrices & Game Theory**            | 2D Matrices, compass deltas, in-place $90^\circ$ rotation, Matrix Multiplication $O(N^3)$, Matrix Exponentiation $O(N^3 \log K)$, Nim Game & Mex, TSP Bitmask DP $O(2^N \cdot N^2)$, XOR Basis (linear basis over $GF(2)$)     |
+
+---
+
+### Golden Rules of Complexity by Constraint ($1.0\text{s} \approx 10^8\text{ ops} \mid 256\text{MB}$)
+
+| Input Size ($N$)                       | Maximum Complexity                                   | Typical Paradigms / Techniques                                          |
+| :------------------------------------- | :--------------------------------------------------- | :---------------------------------------------------------------------- |
+| **$N \le 11$**                         | $O(N!) \text{ or } O(N^2 \cdot 2^N)$                 | Brute-force permutations (`next_permutation`), TSP exact                |
+| **$N \le 18\text{--}22$**              | $O(2^N) \text{ or } O(N \cdot 2^N)$                  | Bitmask DP, Meet-in-the-middle, Submasks $O(3^N)$                       |
+| **$N \le 400\text{--}500$**            | $O(N^3)$                                             | Floyd-Warshall, Matrix Multiplication, Interval DP                      |
+| **$N \le 2\,000\text{--}5\,000$**      | $O(N^2)$                                             | 2D DP ($N \times W$), All-pairs pairwise checks                         |
+| **$N \le 10^5\text{--}2 \times 10^5$** | $O(N \sqrt{N}) \text{ or } O(N \log^2 N)$            | Mo's algorithm, Sqrt decomposition                                      |
+| **$N \le 5 \times 10^5\text{--}10^6$** | $O(N \log N) \text{ or } O(N)$                       | Sorting, Segment Tree, Fenwick, DSU, Dijkstra                           |
+| **$N \le 10^7\text{--}10^8$**          | $O(N)$                                               | Linear Sieve (SPF), Two Pointers, Sliding Window, Kadane                |
+| **$N \ge 10^9$**                       | $O(\sqrt{N}) \text{ or } O(\log N) \text{ or } O(1)$ | Trial division factorize, Binary search on answer, Math closed formulas |
+
+* **Memory Rules ($256\text{MB}$ Limit)**: `int` $\le 5.0 \times 10^7$, `long long` $\le 2.5 \times 10^7$, 2D `int[5000][5000]` $= 100\text{MB}$ (fits), `std::set`/`std::map` $\le 4.0 \times 10^6$ elements.
+
+---
+
+## How to Compile to PDF
+
+### Option 1: Command Line (Marp CLI)
+Make sure you have Node.js installed, then run:
+
+```bash
+# Compile Notebook-TRD.md to Notebook-TRD.pdf using the custom US Letter theme:
+npx -y @marp-team/marp-cli Notebook-TRD.md --theme-set src/us-letter-light.css --allow-local-files --pdf -o Notebook-TRD.pdf
+```
+
+### Option 2: VS Code Extension
+1. Install the official [Marp for VS Code](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode) extension.
+2. Open [`Notebook-TRD.md`](./Notebook-TRD.md).
+3. Open the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`), type **`Marp: Export Slide Deck...`**, and select **PDF**.
+
+---
+
+## Repository Structure
+
+```text
+.
+├── Notebook-TRD.md          # Master ICPC Reference Document source (Marp Markdown)
+├── Notebook-TRD.pdf         # Compiled 25-page printable reference PDF
+├── README.md                # Documentation and build instructions
+├── LICENSE                  # CC BY-SA 4.0 License
+└── src/
+    ├── us-letter-light.css  # Custom CSS theme for US Letter single-sided printing
+    ├── containers.png       # C++ STL container decision flowchart
+    └── preview.png          # README preview thumbnail strip
+```
+
+---
+
+## References & Literature (Exact Code Attribution)
+
+The algorithms, theorems, and implementations in this notebook are sourced and adapted from the following literature cataloged at [CPC Gallos — Recursos](https://cpc-gallos.github.io/blog/Recursos/) and open-source libraries:
+
+### Original CPC Gallos Content
+* **Ariel Parra** — [*Plantilla* (Template)](https://cpc-gallos.github.io/blog/Plantilla/), CPC Gallos blog: the club's own long-form C++ competitive template — TLE pragmas (`Ofast,unroll-loops`, `avx2` target), `bits/stdc++.h` + type aliases (`ll`, `ull`), the `ios::sync_with_stdio(0); cin.tie(0);` fast I/O setup, `#define endl '\n'`, `#define all(x)`, and the `dbg(...)` debugging macro — is the direct basis for Section 1's C++ Template & PBDS (Section 1).
+* **Ariel Parra**: `int2bin`/`bin2int` binary-vector conversion helpers (Section 3) and the circular string rotations helper (Section 4) are original club implementations, credited inline in the code comments where they appear.
+
+### Team & Personal Acknowledgments
+* **Karim Zaafrani** ([LinkedIn](https://www.linkedin.com/in/karim-zaafrani-148868209/)) — teammate at **UTCode**, SWERC 2025: this notebook's Iterative Segment Tree and 2-SAT (both Section 13), Hopcroft-Karp Bipartite Matching (Section 19), String Hashing (Section 1), Pollard's Rho (Section 8), Z-Function (Section 16), and XOR Basis (Section 24) are adapted directly from his team's notebook/cheatsheet/TRD, `UTcode_SWERC_2025.pdf`. Huge thanks, Karim, for putting that reference together and sharing it!
+
+### Competitive Programming Books & Academic Literature
+* **Antti Laaksonen** — [*Competitive Programmer’s Handbook*](https://cses.fi/book/book.pdf) & [*Guide to Competitive Programming*](https://web.archive.org/web/20240416164948/https://edisciplinas.usp.br/pluginfile.php/7933913/course/section/6549987/Antti%20Laaksonen%20-%20Guide%20to%20Competitive%20Programming_%20Learning_Version2.pdf) (Springer):
+  - **Golden Rules of Complexity by Constraint**: the $N$-to-feasible-complexity table keyed to the $\approx 10^8$ ops/sec, 1-second budget heuristic, adapted from CPH's "Estimating Efficiency" section (Table of Contents & Reference Index page).
+  - **Submask Enumeration**: $O(3^N)$ all-submasks loop `for (int s = m; s; s = (s - 1) & m)` (Section 3).
+  - **Coordinate Compression**: `sort` + `unique` + `lower_bound` indexing (Section 8).
+  - **2-Pass BFS Tree Diameter**: Double BFS endpoint search (Section 20).
+* **Henry S. Warren Jr.** — [*Hacker’s Delight*](https://en.wikipedia.org/wiki/Hacker%27s_Delight) (Addison-Wesley):
+  - **Gosper's Hack**: Next lexicographical permutation of $k$ set bits (Section 3).
+  - **Bit Manipulation Idioms**: Isolate LSB `x & -x`, clear LSB `x & (x - 1)`, power-of-2 check `!(x & (x - 1))` (Section 3).
+* **Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein (CLRS)** — [*Introduction to Algorithms*](https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/) (MIT Press):
+  - **0/1 Knapsack & Longest Common Subsequence (LCS)**: Dynamic programming state transitions (Sections 21 & 22).
+  - **Fractional Knapsack & Interval Scheduling**: Greedy activity selection (Section 23).
+  - **Matrix Multiplication & Exponentiation**: Cache-efficient row-major arithmetic and divide-and-conquer powers (Section 24).
+* **Darren Yao** — [*An Introduction to the USA Computing Olympiad*](https://darrenyao.com/usacobook/cpp.pdf):
+  - **`std::multiset` Single-Element Erase**: `ms.erase(ms.find(x))` erase-by-iterator idiom (Section 14).
+  - **2D Prefix Sums & 1D Difference Array**: Submatrix $O(1)$ query and range add logic (Section 11).
+* **Sanjoy Dasgupta, Christos H. Papadimitriou, Umesh V. Vazirani** — [*Algorithms*](https://web.archive.org/web/20160113140911/http://algorithmics.lsi.upc.edu/docs/Dasgupta-Papadimitriou-Vazirani.pdf) (McGraw-Hill):
+  - **Kahn's Topological Sort**: Indegree queue-based DAG linear ordering (Section 17).
+  - **Dijkstra's Shortest Path**: $O((V + E) \log V)$ min-heap traversal (Section 18).
+  - **Kruskal's MST, Floyd-Warshall & Bellman-Ford**: Greedy edge sorting, all-pairs $O(V^3)$, and $O(V \cdot E)$ negative-cycle detection (Section 18).
+* **Johan Sannemo** — [*Principles of Algorithmic Problem Solving*](https://web.archive.org/web/20260109192309/https://www.csc.kth.se/~jsannemo/slask/main.pdf) (KTH):
+  - **Monotonic Stack**: Next Greater Element (NGE) in $O(N)$ (Section 16).
+  - **Monotonic Deque**: Sliding window minimum in $O(N)$ (Section 12).
+* **David Esparza & Juan Ruiz** — [*Algorithms for Competitive Programming*](https://snip.dssr.ch/?8991f4d1321aa88f#ENKw1jdtBpZ7g57N3QgQLVpNSzZ4kaw1Xyeu4iMNodab): Number theory modulo foundations (Section 10).
+* **Gayle Laakmann McDowell** — [*Cracking the Coding Interview*](https://archive.org/details/cracking-the-coding-interview-6th-edition-189-programming-questions-and-solutions_202312/) (6th Ed.): Bitwise manipulation idioms (Section 3).
+
+### Open-Source ICPC Libraries & Online Knowledge Bases
+* **Gustavo Meza** — [GustavoMeza/icpc-notebook](https://github.com/GustavoMeza/icpc-notebook):
+  - **LIS Sequence Reconstruction**: Backward reconstruction via parent-pointer tracking (Section 22).
+  - **TSP Bitmask DP**: `tsp(mask, u)` with `dist[u][v]` transitions (Section 22).
+* **KTH Royal Institute of Technology** — [KACTL (KTH Algorithm Competition Template Library)](https://github.com/kth-competitive-programming/kactl):
+  - **Deterministic 64-bit Miller-Rabin**: 12 prime bases for $n < 2^{64}$ (Section 5).
+  - **Wheel Prime Skip**: `nextPrime` and `prevPrime` stepping (Section 5).
+  - **Monotone Chain Convex Hull**: Andrew's $O(N \log N)$ 2D hull (Section 7).
+  - **Fast `__int128` I/O**: `read_int128` and `print_int128` (Section 2).
+* **CP-Algorithms / E-Maxx** — [Algorithms for Competitive Programming](https://cp-algorithms.com/):
+  - **KMP String Matching**: Prefix $\pi$-function computation in $O(N)$ (Section 4).
+  - **Extended Euclidean Algorithm & Modular Inverse**: `extGCD(a, b, x, y)` and `modInverse` (Section 10).
+  - **Linear Sieve & SPF**: Smallest Prime Factor array for $O(\log N)$ prime factorization (Section 5).
+  - **Chinese Remainder Theorem (CRT)**: Pairwise coprime reconstruction (Section 10).
+  - **Disjoint Set Union (DSU)**: Path compression & Union by rank/size (Section 18).
+  - **Sqrt Decomposition**: Block-size $O(\sqrt{N})$ range query & $O(1)$ point update (Section 11).
+  - **Binary Indexed Tree (Fenwick)**: Point update & prefix sum queries in $O(\log N)$ (Section 11).
+  - **Binary Lifting LCA**: Binary jumps table & $O(\log N)$ Lowest Common Ancestor query (Section 20).
+  - **Matrix Exponentiation for Recurrences**: $O(N^3 \log K)$ transition matrix fast powers (Section 24).
+* **Victor Lecomte** — [Handbook of Geometry for Competitive Programming](https://victorlecomte.com/cp-geo.pdf):
+  - **`std::complex` Vector Primitives**: Dot product, 2D cross product, CCW orientation test (Section 7).
+  - **Point-to-Segment & Segment Intersection**: Clamping and proper cross-check (Section 7).
+  - **Shoelace Formula, Pick's Theorem & Point-in-Polygon**: Ray casting winding parity (Section 15).
+* **Policy-Based Data Structures (PBDS)**: [Codeforces Blog #11080](https://codeforces.com/blog/entry/11080) by **adamant** (`ordered_set`, `order_of_key`, `find_by_order`, `gp_hash_table`) (Section 1).
+* **Anti-Hash Table Hacking (`custom_hash`)**: [Codeforces Blog #62393](https://codeforces.com/blog/entry/62393) by **neal** (`splitmix64` randomized bit-mixer for hash maps) (Section 14).
+* **Brace-Initialization Container Idiom**: [Codeforces Blog #15643, "C++ Tricks"](https://codeforces.com/blog/entry/15643) by **HosseinYousefi** (`p = {3, 4}` / `v = {4, 5}` over `make_pair`/explicit ctor calls) (Section 1).
+* **Fast Unsynchronized `iostream` for Large Input**: the classic `ios::sync_with_stdio(false); cin.tie(nullptr);` technique (adopted via Ariel Parra's *Plantilla*, above) traces back to [Codeforces Blog #925](https://codeforces.com/blog/entry/925) by **yak_ex** (Section 1).
+* **Kamil Debowski (Errichto)** — [Errichto/contest_library](https://github.com/Errichto/contest_library): Pre-submission bug traps and edge cases checklist (Table of Contents & Reference Index page).
+* **Sergey Slotin** — [Algorithmica](https://algorithmica.org/en/): Ternary search precision criteria & compiler optimizations (Section 9).
+* **OI Wiki Project** — [OI Wiki (Olympic Informatics)](https://oi-wiki.org/): Sprague-Grundy theorem & Mex calculation (Section 24).
+
+### Foundational Algorithmic Papers & Historic Theorems
+* **A. M. Andrew (1979)**: *Another efficient algorithm for convex hulls in two dimensions* — Monotone Chain Convex Hull in $O(N \log N)$ (Section 7).
+* **Peter M. Fenwick (1994)**: *A New Data Structure for Cumulative Frequency Tables* — Binary Indexed Tree / Fenwick Tree (Section 11).
+* **Joseph Born Kadane (1984)**: Maximum Subarray Sum Algorithm in $O(N)$ (Section 22).
+* **Édouard Lucas (1878)**: Lucas' Theorem for $\binom{n}{r} \bmod p$ with prime moduli (Section 6).
+* **Roland Sprague & Patrick Michael Grundy (1935 / 1939)**: Sprague-Grundy Theorem and impartial game theory (Section 24).
+* **Sunzi (Sun Tzu, c. 3rd–5th century AD)**: *Sunzi Suanjing* — Chinese Remainder Theorem (CRT) (Section 10).
+
+### Visual & Theme Credits
+* **C++ STL Container Decision Flowchart**: Designed by **David Moore** ([CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)), popularized via [Stack Overflow #471432](https://stackoverflow.com/questions/471432/in-which-scenario-do-i-use-a-particular-stl-container). Featured in earlier versions of this notebook, replaced in the current edition to make room for 2-SAT & Segment Tree — thanks to David Moore for the diagram nonetheless; it lives on as `src/containers.png`.
+* **Printable CSS Theme**: Adapted from [A4-marp](https://github.com/stanfrbd/A4-marp) by Stanislas Medrano ([@stanfrbd](https://github.com/stanfrbd)) with Atom One Dark syntax palette by Daniel Gamage.
+
+### Standard Conventions Without a Single Traceable Source
+A handful of items in this notebook are common competitive-programming conventions repeated across countless independent templates and resources, with no single canonical origin to credit; rather than assign a source arbitrarily, they are named here explicitly. If you are the original author of any of these routines or know of an earlier canonical reference, feel free to open an issue or email **[cpc.gallos@gmail.com](mailto:cpc.gallos@gmail.com)** — we will be glad to add your name and attribution!
+* **Memory Budget Rules & Primitive Types tables** (Table of Contents & Reference Index page): generic arithmetic (256MB ÷ sizeof(type)) repeated across virtually every CP notebook.
+* **`getchar_unlocked` fast integer reader** (Section 2): standard unbuffered I/O idiom, ubiquitous across competitive C++ templates.
+* **Basic DFS/BFS, Bipartite Check & Flood Fill** (Section 17): textbook graph traversal taught identically in nearly every algorithms course/resource.
+* **Elementary combinatorics identities** — Stars & Bars, Catalan recurrence, Derangements, Pigeonhole Principle (Section 6): standard results found in any combinatorics reference, not specific to one book cited above.
+
+---
+
+## License
+
+This repository is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0)](./LICENSE).

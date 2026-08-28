@@ -8,164 +8,200 @@
 /* A4 by stanfrbd */
 
 section {
-    width: 215.9mm; /* Letter size width */
-    height: 279.4mm; /* Letter size height */  
-    font-family: Liberation Sans;/*sans-serif;*/
-    align-items: stretch;
-    background: white;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    font-size: 14px;
-    justify-content: left;
-    text-align: justify;
-    padding: 30px 70px;
-    position: relative; /* Needed for absolute positioning of header and pagination */
+  width: 215.9mm;
+  /* Letter size width */
+  height: 279.4mm;
+  /* Letter size height */
+  font-family: Liberation Sans, sans-serif;
+  align-items: stretch;
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  font-size: 13.6px;
+  justify-content: left;
+  text-align: left;
+  padding: 30px 40px 16px 40px;
+  position: relative;
+  /* Needed for absolute positioning of header and pagination */
 }
 
 /* Pagination at the top right corner */
 section::before {
-    content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
-    position: absolute;
-    top: 30px; /* Adjust to align with 8mm margin */
-    right: 37.8px; /* Adjust to align with 10mm margin */
-    font-size: 12px; 
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+  position: absolute;
+  top: 12px;
+  right: 40px;
+  font-size: 10.5px;
+  font-weight: bold;
+  color: #555;
 }
 
 /* Remove default pagination display */
 section[data-marpit-pagination]::after {
-    display: none;
+  display: none;
 }
-
 
 /* Header at the top left corner */
 header {
-    position: absolute;
-    top: 30px; /* Adjust to align with 8mm margin */
-    left: 37.8px; /* Adjust to align with 10mm margin */
-    text-align: left;
-    font-size: 13px;
-    color: #0a0a0a;
+  position: absolute;
+  top: 12px;
+  left: 40px;
+  text-align: left;
+  font-size: 10.5px;
+  font-weight: 600;
+  color: #333;
 }
 
 footer {
-    text-align: center;
-    font-size: 18px;
-    color: #0a0a0a;
-    bottom: 21px;
+  text-align: center;
+  font-size: 13px;
+  color: #0a0a0a;
+  bottom: 10px;
 }
 
-p code {
-    background-color: #f6f8fa;
-    border-radius: .4em;
-    padding: 0.2em 0.5em;
+h1 {
+  font-size: 1.2em;
+  margin: 0.1em 0 0.08em 0;
+  color: #1e3a8a;
+  border-bottom: 1.5px solid #1e3a8a;
+  padding-bottom: 2px;
+}
+
+h2 {
+  font-size: 1.05em;
+  margin: 0.1em 0 0.06em 0;
+  color: #1e3a8a;
+}
+
+h3 {
+  font-size: 0.9em;
+  margin: 0.14em 0 0.05em 0;
+  color: #0f172a;
+}
+
+p,
+ul,
+ol {
+  margin: 0.1em 0;
+}
+
+li {
+  margin: 0.05em 0;
+}
+
+p code,
+li code {
+  background-color: #f1f5f9;
+  border-radius: .3em;
+  padding: 0.08em 0.3em;
+  font-size: 86%;
 }
 
 img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 pre {
-    border-radius: .4em;
-    padding: 0.2em 0.5em;
-    line-height: 1.15;
-    overflow-x: auto;
-    padding: 0.6em;
-    word-break: break-all;
-    white-space: pre-wrap !important;
-    font-size: 94%;
-    border-style: solid;
-    border-width: 1px;
+  border-radius: .35em;
+  line-height: 1.1;
+  overflow: visible;
+  padding: 0.28em 0.45em;
+  word-break: normal;
+  white-space: pre-wrap !important;
+  font-size: 83%;
+  border: 1px solid #cbd5e1;
+  margin: 0.12em 0 0.2em 0;
 }
 
 code {
-    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    color: black;
-    overflow-x: auto;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  color: black;
+  overflow: visible;
 }
 
 a {
-    color: #50b3ff;
-    text-decoration: none;
+  color: #50b3ff;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 h1,
 h2 {
-    color: #246;
+  color: #246;
 }
 
 blockquote {
-    color: #ff33ff;
-    padding: 0 1em;
-    border-left: 0.25em solid #ff33ff;
+  color: #ff33ff;
+  padding: 0 1em;
+  border-left: 0.25em solid #ff33ff;
 }
 
 blockquote>:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 blockquote>:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 table {
-    padding: 0;
-    border-spacing: 0;
-    border-collapse: collapse;
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 table tr {
-    border-top: 1px solid #cccccc;
-    background-color: white;
-    margin: 0;
-    padding: 0;
+  border-top: 1px solid #cccccc;
+  background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
 table tr:nth-child(2n) {
-    background-color: #f6f8fa;
+  background-color: #f6f8fa;
 }
 
 table tr th {
-    font-weight: bold;
-    border: 1px solid #cccccc;
-    text-align: center;
-    margin: 0;
-    padding: 6px 13px;
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  text-align: center;
+  margin: 0;
+  padding: 6px 13px;
 }
 
 table tr td {
-    border: 1px solid #cccccc;
-    margin: 0;
-    padding: 6px 13px;
+  border: 1px solid #cccccc;
+  margin: 0;
+  padding: 6px 13px;
 }
 
 table tr th :first-child,
 table tr td :first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 table tr th :last-child,
 table tr td :last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 table code {
-    border-radius: .4em;
-    padding: 0.2em 0.5em;
-    background-color: #f6f8fa;
+  border-radius: .4em;
+  padding: 0.2em 0.5em;
+  background-color: #f6f8fa;
 }
 
 ul li code {
-    border-radius: .4em;
-    padding: 0.2em 0.5em;
-    background-color: #f6f8fa;
+  border-radius: .4em;
+  padding: 0.2em 0.5em;
+  background-color: #f6f8fa;
 }
 
 
@@ -190,79 +226,240 @@ hue-6-2: #e6c07b
 */
 
 .hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    color: #abb2bf;
-    background: #282c34;
-  }
-  
-  .hljs-comment,
-  .hljs-quote {
-    color: #5c6370;
-    font-style: italic;
-  }
-  
-  .hljs-doctag,
-  .hljs-keyword,
-  .hljs-formula {
-    color: #c678dd;
-  }
-  
-  .hljs-section,
-  .hljs-name,
-  .hljs-selector-tag,
-  .hljs-deletion,
-  .hljs-subst {
-    color: #e06c75;
-  }
-  
-  .hljs-literal {
-    color: #56b6c2;
-  }
-  
-  .hljs-string,
-  .hljs-regexp,
-  .hljs-addition,
-  .hljs-attribute,
-  .hljs-meta-string {
-    color: #98c379;
-  }
-  
-  .hljs-built_in,
-  .hljs-class .hljs-title {
-    color: #e6c07b;
-  }
-  
-  .hljs-attr,
-  .hljs-variable,
-  .hljs-template-variable,
-  .hljs-type,
-  .hljs-selector-class,
-  .hljs-selector-attr,
-  .hljs-selector-pseudo,
-  .hljs-number {
-    color: #d19a66;
-  }
-  
-  .hljs-symbol,
-  .hljs-bullet,
-  .hljs-link,
-  .hljs-meta,
-  .hljs-selector-id,
-  .hljs-title {
-    color: #61aeee;
-  }
-  
-  .hljs-emphasis {
-    font-style: italic;
-  }
-  
-  .hljs-strong {
-    font-weight: bold;
-  }
-  
-  .hljs-link {
-    text-decoration: underline;
-  }
-  
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #abb2bf;
+  background: #282c34;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #5c6370;
+  font-style: italic;
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-formula {
+  color: #c678dd;
+}
+
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e06c75;
+}
+
+.hljs-literal {
+  color: #56b6c2;
+}
+
+.hljs-string,
+.hljs-regexp,
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #98c379;
+}
+
+.hljs-built_in,
+.hljs-class .hljs-title {
+  color: #e6c07b;
+}
+
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #d19a66;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #61aeee;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+/* Two-column layout helpers for TOC and Cheatsheets */
+.columns-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.toc-col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.toc-row {
+  font-size: 10.8px;
+  line-height: 1.25;
+  border-bottom: 1px dotted #cbd5e1;
+  padding-bottom: 2px;
+}
+
+.toc-p {
+  font-weight: bold;
+  color: #1e3a8a;
+  display: inline-block;
+  width: 20px;
+}
+
+.toc-title {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.toc-desc {
+  font-size: 9.2px;
+  color: #475569;
+  display: block;
+  margin-left: 20px;
+}
+
+/* TOC Category Accent Borders */
+.toc-cat-base {
+  border-left: 2.5px solid #4f46e5;
+  padding-left: 4px;
+}
+
+.toc-cat-math {
+  border-left: 2.5px solid #9333ea;
+  padding-left: 4px;
+}
+
+.toc-cat-algo {
+  border-left: 2.5px solid #0284c7;
+  padding-left: 4px;
+}
+
+.toc-cat-dp {
+  border-left: 2.5px solid #d97706;
+  padding-left: 4px;
+}
+
+.toc-cat-graph {
+  border-left: 2.5px solid #059669;
+  padding-left: 4px;
+}
+
+.toc-cat-geom {
+  border-left: 2.5px solid #dc2626;
+  padding-left: 4px;
+}
+
+/* Semantic UX Badges */
+.badge-safe {
+  display: inline-block;
+  background-color: #e6f4ea;
+  color: #137333;
+  border: 1px solid #ceead6;
+  border-radius: 3px;
+  padding: 0.5px 4px;
+  font-size: 8.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  vertical-align: 1px;
+  line-height: 1.2;
+}
+
+.badge-caveat,
+.badge-warn {
+  display: inline-block;
+  background-color: #fef3c7;
+  color: #78350f;
+  border: 1px solid #fde68a;
+  border-radius: 3px;
+  padding: 0.5px 4px;
+  font-size: 8.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  vertical-align: 1px;
+  line-height: 1.2;
+}
+
+.badge-danger,
+.badge-trap {
+  display: inline-block;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  border-radius: 3px;
+  padding: 0.5px 4px;
+  font-size: 8.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  vertical-align: 1px;
+  line-height: 1.2;
+}
+
+.badge-info,
+.badge-idx {
+  display: inline-block;
+  background-color: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+  border-radius: 3px;
+  padding: 0.5px 4px;
+  font-size: 8.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  vertical-align: 1px;
+  line-height: 1.2;
+}
+
+/* Complexity Tier Classes */
+.o-fast {
+  color: #166534;
+  font-weight: 700;
+}
+
+.o-std {
+  color: #0369a1;
+  font-weight: 700;
+}
+
+.o-mid {
+  color: #b45309;
+  font-weight: 700;
+}
+
+.o-exp {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+/* Formula Highlight Box */
+.formula-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #2563eb;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin: 2px 0;
+  display: inline-block;
+}

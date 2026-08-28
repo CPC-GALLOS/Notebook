@@ -1,0 +1,26 @@
+{
+  "name": "notebook",
+  "version": "1.0.0",
+  "description": "> **ICPC-Compliant 25-Page Competitive Programming Reference Document (Notebook / Cheat Sheet)**   > Maintained by **[CPC Gallos](https://github.com/CPC-GALLOS)** (Club de Programación Competitiva Gallos) @ Universidad Autónoma de Aguascalientes (UAA).",
+  "main": "engine.js",
+  "scripts": {
+    "build": "marp Notebook-TRD.md --pdf -o Notebook-TRD.pdf",
+    "pdf": "marp Notebook-TRD.md --pdf -o Notebook-TRD.pdf",
+    "html": "marp Notebook-TRD.md --html -o Notebook-TRD.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CPC-GALLOS/Notebook.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "CC-BY-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/CPC-GALLOS/Notebook/issues"
+  },
+  "homepage": "https://github.com/CPC-GALLOS/Notebook#readme",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.5.0",
+    "@marp-team/marp-core": "^4.4.0"
+  }
+}
