@@ -6,7 +6,8 @@
   "scripts": {
     "build": "marp Notebook-TRD.md --pdf -o Notebook-TRD.pdf",
     "pdf": "marp Notebook-TRD.md --pdf -o Notebook-TRD.pdf",
-    "html": "marp Notebook-TRD.md --html -o Notebook-TRD.html"
+    "html": "marp Notebook-TRD.md --html -o Notebook-TRD.html",
+    "preview": "python3 generate_preview.py"
   },
   "repository": {
     "type": "git",

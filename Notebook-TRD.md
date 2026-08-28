@@ -190,9 +190,10 @@ __int128 read128() {
 ### Standard Math Functions & Float Comparisons ($O(1)$)
 ```cpp
 min({a, b, c, d}); max({a, b, c, d}); // min/max of list: O(k)
-round(1.45); // 1 | round(1.5); // 2 | ceil(1.2); // 2 | floor(1.8); // 1
-trunc(-4.5); // -4 (toward zero) vs floor(-4.5); // -5 (toward -inf)
-sqrt(x); sqrtl(x); cbrt(x); hypot(dx, dy); pow(base, exp); // O(1)
+round(1.45); // 1 | ceil(1.2); // 2 | floor(1.8); // 1 | trunc(-4.5); // -4 (toward 0)
+// Integer Ceil Div for a, b > 0: (a + b - 1) / b | Floor: a / b
+sqrt(x); sqrtl(x); cbrt(x); hypot(dx, dy); pow(base, exp); powl(base, exp); pow(p, 1.0 / n); // nth root
+// Math Constants: M_PI (3.1415926535...), M_E (2.7182818284...), M_SQRT2 (1.41421356...)
 
 // Fast Integer Reader (via getchar_unlocked for strict TLE limits):
 inline int fast_read_int() {
@@ -205,8 +206,8 @@ inline int fast_read_int() {
 // Float Comparison & Radian <-> Degree Conversions:
 const double EPS = 1e-9;
 inline bool d_eq(double a, double b) { return abs(a - b) < EPS; }
-inline double deg2rad(double d) { return d * acos(-1.0) / 180.0; }
-inline double rad2deg(double r) { return r * 180.0 / acos(-1.0); }
+inline double deg2rad(double d) { return d * M_PI / 180.0; }
+inline double rad2deg(double r) { return r * 180.0 / M_PI; }
 ```
 
 ---
@@ -214,15 +215,13 @@ inline double rad2deg(double r) { return r * 180.0 / acos(-1.0); }
 # 3. Bit Manipulation & `std::bitset`
 
 ### Bitwise Operators & Fundamental Hacks ($O(1)$)
-* `x & 1` : check odd ($1$) / even ($0$)
-* `1LL << k` : $2^k$ (use `1ULL << k` for 64-bit unsigned)
-* `x | (1LL << k)` : set $k$-th bit
-* `x & ~(1LL << k)` : clear $k$-th bit
-* `x ^ (1LL << k)` : flip $k$-th bit
-* `(x >> k) & 1` : test $k$-th bit ($0$ or $1$)
-* `x & -x` : isolate lowest set bit (LSB)
-* `x & (x - 1)` : clear lowest set bit (removes rightmost 1)
-* `(x > 0) && !(x & (x - 1))` : check if $x$ is a power of 2
+* `x & 1` : check odd ($1$) / even ($0$) | `a ^= b; b ^= a; a ^= b;` : in-place swap
+* `1LL << k` : $2^k$ (`1ULL << k` for unsigned) | `x >> k` : $x / 2^k$ (integer division)
+* `x | (1LL << k)` : set $k$-th bit | `x & ~(1LL << k)` : clear $k$-th bit
+* `x ^ (1LL << k)` : flip $k$-th bit | `(x >> k) & 1` : test $k$-th bit ($0$ or $1$)
+* `x & -x` : isolate lowest set bit (LSB) | `x & (x - 1)` : clear lowest set bit (removes rightmost 1)
+* `(x > 0) && !(x & (x - 1))` : $1$ if $x$ is a power of 2
+* `ch | ' '` : tolower | `ch & '_'` : toupper | `ch ^ ' '` : toggle case (ASCII bit hacks)
 
 ### GCC Built-in Bit Functions ($O(1)$) (32-bit & 64-bit `ll`)
 ```cpp
@@ -805,17 +804,16 @@ unordered_set<int> us; us.insert(5); us.erase(5); if (us.count(5)) {} // O(1) av
 
 ### Useful `<numeric>` & `<algorithm>` Functions ($O(N)$)
 ```cpp
-// Sum & prod, fill & seq, merge 2 sorted ranges, permutations, min/max, reverse/rotate: O(N)
-ll sum = accumulate(all(v), 0LL);
-ll prod = accumulate(all(v), 1LL, multiplies<ll>());
-fill(all(v), 0);
-iota(all(v), 1); // fills w/ 1, 2, 3, ..., n
-vector<int> merged;
-merge(all(v1), all(v2), back_inserter(merged));
-sort(all(v));
-do { /* process perm v */ } while (next_permutation(all(v)));
-int min_val = *min_element(all(v)); // min idx: min_element(all(v)) - v.begin()
-int max_val = *max_element(all(v)); // max idx: max_element(all(v)) - v.begin()
+// Sum/prod, iota, merge/set ops, permutations, min/max, reverse/rotate: O(N)
+ll sum = accumulate(all(v), 0LL); ll prod = accumulate(all(v), 1LL, multiplies<ll>());
+fill(all(v), 0); iota(all(v), 1); // fills w/ 1, 2, 3, ..., n
+vector<int> mrg, inter, un, diff;
+merge(all(v1), all(v2), back_inserter(mrg));
+set_intersection(all(a), all(b), back_inserter(inter)); // A ∩ B: O(N + M)
+set_union(all(a), all(b), back_inserter(un));           // A ∪ B: O(N + M)
+set_difference(all(a), all(b), back_inserter(diff));    // A \ B: O(N + M)
+sort(all(v)); do { /* perm */ } while (next_permutation(all(v)));
+int min_val = *min_element(all(v)); int max_val = *max_element(all(v)); // min/max val
 auto [mn_it, mx_it] = minmax_element(all(v)); // single pass O(N)
 reverse(all(v)); rotate(v.begin(), v.begin() + k, v.end()); // O(N)
 ```
@@ -1358,16 +1356,18 @@ void euler_tour(int u, int p = 0) {
 
 # 18. Dynamic Programming I: Classic Paradigms
 
-### Fibonacci (Top-Down Memoization $O(N)$ vs Bottom-Up $O(1)$ Space)
+### Fibonacci (Binet $O(1)$, Memo $O(N)$, Tabulation $O(1)$ Space)
 ```cpp
-// 1. Top-Down Memoization: O(N) time & space
+// 1. Binet Formula (O(1) exact for n <= 70):
+ull fib_binet(int n) { return round(pow((1.0 + sqrt(5.0)) / 2.0, n) / sqrt(5.0)); }
+// 2. Top-Down Memoization: O(N) time & space
 vector<ll> memo(MAXN, -1);
 ll fib_memo(int n) {
     if (n <= 1) return n;
     if (memo[n] != -1) return memo[n];
     return memo[n] = fib_memo(n - 1) + fib_memo(n - 2);
 }
-// 2. Bottom-Up Tabulation (O(N) time, O(1) Space):
+// 3. Bottom-Up Tabulation (O(N) time, O(1) Space):
 ull fib(int n, ull MOD = 1e9 + 7) {
     if (n <= 1) return n;
     ull a = 0, b = 1;
