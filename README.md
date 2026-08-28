@@ -29,14 +29,7 @@ Built with **[Marp](https://marp.app/)** and a custom CSS theme (`src/us-letter-
 
 ## ICPC TRD Official Rules & Regulations
 
-> *“This document may contain up to 25 pages of reference materials, single-sided, letter or A4 size, with pages numbered in the upper right-hand corner and your university name and team name printed in the upper left-hand corner.*
-> *Text and illustrations must be readable by a person with correctable eyesight without magnification from a distance of 1/2 meter.*
-> *It may include hand-written comments and corrections on the fronts of pages only.*
-> *The document must be in some type of notebook or folder with the name of your institution on the front.”*
-> 
-> *(Source: [ICPC World Finals On-Site Registration](https://icpc.global/worldfinals/on-site-registration))*
-
-### Official ICPC TRD Requirements:
+*(Source: [ICPC World Finals On-Site Registration](https://icpc.global/worldfinals/on-site-registration))*
 
 1. **25-Page Limit**: At most **25 single-sided pages** (Letter or A4 size), numbered in the **upper right-hand corner**.
 2. **Mandatory Header**: Your **University Name and Team Name** must be printed in the **upper left-hand corner** on every page.
