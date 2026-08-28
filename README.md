@@ -29,15 +29,27 @@ Built with **[Marp](https://marp.app/)** and a custom CSS theme (`src/us-letter-
 
 ## ICPC TRD Official Rules & Regulations
 
-> *“Notebooks, also commonly known as cheat sheets, are officially designated as the **Team Reference Document (TRD)** by the ICPC. These are documents that teams may bring to on-site competitions, which can include algorithms, theory, programming language references, code templates, and useful snippets.”*
+> *“This document may contain up to 25 pages of reference materials, single-sided, letter or A4 size, with pages numbered in the upper right-hand corner and your university name and team name printed in the upper left-hand corner.*
+> *Text and illustrations must be readable by a person with correctable eyesight without magnification from a distance of 1/2 meter.*
+> *It may include hand-written comments and corrections on the fronts of pages only.*
+> *The document must be in some type of notebook or folder with the name of your institution on the front.”*
 > 
 > *(Source: [ICPC World Finals On-Site Registration](https://icpc.global/worldfinals/on-site-registration))*
 
-### The 3 Official ICPC Constraints for TRDs:
+### Official ICPC TRD Requirements:
 
-1. **25-Page Limit**: Must consist of at most **25 single-sided pages** (Letter or A4 size), numbered in the top-right corner, with the institution name, team name, and document title in the top-left header on every page.
-2. **50 cm Legibility**: All text and illustrations must be clearly readable from a distance of **50 cm** without magnification or zooming.
-3. **Printed Side Only**: Any handwritten notes or corrections must be written exclusively on the printed side of the sheet (the reverse side must remain blank).
+1. **25-Page Limit**: At most **25 single-sided pages** (Letter or A4 size), numbered in the **upper right-hand corner**.
+2. **Mandatory Header**: Your **University Name and Team Name** must be printed in the **upper left-hand corner** on every page.
+3. **1/2 Meter (50 cm) Legibility**: All text and illustrations must be readable without magnification from a distance of **1/2 meter**.
+4. **Printed Side Only**: Handwritten notes and corrections are allowed on the **fronts of pages only** (the reverse side must remain blank).
+5. **Notebook / Folder Presentation**: Must be in a notebook or folder with the **name of your institution on the front**.
+
+> [!WARNING]
+> **Customize Your Team Header Before Printing for On-Site Contests**:
+> To comply with official ICPC on-site regulations (Requirement #2 above), make sure to update the `header` field in the YAML frontmatter of [`Notebook-TRD.md`](./Notebook-TRD.md) (line 6) with your **Institution Name and Team Name** before generating your printed PDF:
+> ```yaml
+> header: "Your Institution — Team Name"
+> ```
 
 ---
 

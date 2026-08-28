@@ -449,15 +449,22 @@ ull pollard(ull n) {
 
 # 6. Search: Binary & Ternary Search
 
-### STL Binary Search & Bounds Idioms ($O(\log N)$)
-Array/vector must be sorted:
+### Binary Search & STL Bounds Idioms ($O(\log N)$)
 ```cpp
-vector<int> v = {1, 3, 3, 5, 7, 8};
-auto it1 = lower_bound(all(v), 3); // iterator to 1st elem >= 3: O(log N)
-auto it2 = upper_bound(all(v), 3); // iterator to 1st elem > 3: O(log N)
-int cnt = upper_bound(all(v), 3) - lower_bound(all(v), 3); // count of 3s (2)
-bool exists = binary_search(all(v), 5); // true: O(log N)
-int idx = lower_bound(all(v), 3) - v.begin(); // 0-based index (1)
+// Manual Binary Search: mid = l + (r - l)/2 avoids integer overflow: O(log N)
+int binarySearch(const vector<int>& v, int x) {
+    int l = 0, r = (int)v.size() - 1;
+    while (l <= r) {
+        int mid = l + (r - l) / 2;
+        if (v[mid] == x) return mid;
+        if (v[mid] < x) l = mid + 1; else r = mid - 1;
+    }
+    return -1; // not found
+}
+// STL Bounds Idioms (vector v must be sorted):
+auto it1 = lower_bound(all(v), 3); // 1st >= 3 | auto it2 = upper_bound(all(v), 3); // 1st > 3
+int idx = it1 - v.begin();         // 0-based idx | int cnt = it2 - it1; // count of 3s
+bool exists = binary_search(all(v), 5); // O(log N)
 ```
 
 ### Binary Search on Monotonic Answer ($O(\log(\text{range}) \cdot T_{\text{check}})$)
