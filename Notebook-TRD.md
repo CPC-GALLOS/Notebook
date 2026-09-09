@@ -14,13 +14,13 @@ header: "Γα=Ω5 (CPC-GALLOS)"
 <div class="toc-row toc-cat-base"><span class="toc-p">2</span><span class="toc-title">1. C++ Template & PBDS</span><span class="toc-desc">Fast I/O, pragmas, ordered_set, gp_hash_table, Hashing</span></div>
 <div class="toc-row toc-cat-base"><span class="toc-p">3</span><span class="toc-title">2. Limits & I/O Manipulation</span><span class="toc-desc">numeric_limits, __int128, getline, math funcs</span></div>
 <div class="toc-row toc-cat-base"><span class="toc-p">4</span><span class="toc-title">3. Bits & std::bitset</span><span class="toc-desc">Bit hacks, int2bin, bin2int, submasks, Gosper</span></div>
-<div class="toc-row toc-cat-base"><span class="toc-p">5</span><span class="toc-title">4. Strings & Parsing</span><span class="toc-desc">stringstream, palindromes, rotations, KMP</span></div>
+<div class="toc-row toc-cat-base"><span class="toc-p">5</span><span class="toc-title">4. Strings & Parsing</span><span class="toc-desc">stringstream, palindromes, rotations, KMP, Trie</span></div>
 <div class="toc-row toc-cat-algo"><span class="toc-p">6</span><span class="toc-title">5. Sorting & Coordinate Comp</span><span class="toc-desc">STL sort, Custom comparators, Compression, Pollard's ρ</span></div>
 <div class="toc-row toc-cat-algo"><span class="toc-p">7</span><span class="toc-title">6. Binary & Ternary Search</span><span class="toc-desc">lower/upper_bound, BS on answer, Ternary</span></div>
 <div class="toc-row toc-cat-math"><span class="toc-p">8</span><span class="toc-title">7. Number Theory I: Primes</span><span class="toc-desc">Primes, 64-bit Miller-Rabin, SPF, Factorizations</span></div>
-<div class="toc-row toc-cat-graph"><span class="toc-p">9</span><span class="toc-title">8. Range Queries & Prefix Sums</span><span class="toc-desc">1D/2D Prefix, Diff Array, Sqrt Decomposition</span></div>
+<div class="toc-row toc-cat-graph"><span class="toc-p">9</span><span class="toc-title">8. Range Queries & Prefix Sums</span><span class="toc-desc">1D/2D Prefix, Diff Array, Sparse Table (RMQ)</span></div>
 <div class="toc-row toc-cat-algo"><span class="toc-p">10</span><span class="toc-title">9. Two Pointers & Window</span><span class="toc-desc">Two-sum, Variable window, Monotonic deque</span></div>
-<div class="toc-row toc-cat-algo"><span class="toc-p">11</span><span class="toc-title">10. Non-Linear Structs & Algo</span><span class="toc-desc">set/map, priority_queue, unordered_set, custom_hash</span></div>
+<div class="toc-row toc-cat-algo"><span class="toc-p">11</span><span class="toc-title">10. Non-Linear Structs & Algo</span><span class="toc-desc">set/map, multimap, priority_queue, unordered_set, custom_hash</span></div>
 <div class="toc-row toc-cat-math"><span class="toc-p">12</span><span class="toc-title">11. Combinatorics & Counting</span><span class="toc-desc">nCr, nPr, Stars & Bars, Catalan, Derangements</span></div>
 <div class="toc-row toc-cat-math"><span class="toc-p">13</span><span class="toc-title">12. Number Theory II: Modulo</span><span class="toc-desc">ExtGCD, Mod exp/inv, Totient, Sieve, CRT</span></div>
 
@@ -113,7 +113,7 @@ void solve() {
 }
 
 int main() {
-    ios::sync_with_stdio(0); cin.tie(0);
+    cin.tie(0)->sync_with_stdio(0);
     // freopen("input.txt", "r", stdin); freopen("output.txt", "w", stdout);
     int tc = 1;
     // cin >> tc;
@@ -338,12 +338,6 @@ bool isPalindrome(const string& s) {
     return true;
 }
 
-// Circular String Rotations (Left & Right shifts by Ariel Parra): O(N^2)
-int n = s.size(); vector<string> v_left(n), v_right(n);
-for (int i = 0; i < n; ++i) {
-    v_left[i] = s.substr(i, n - i) + s.substr(0, i);     // left: O(N)
-    v_right[i] = s.substr(n - i, i) + s.substr(0, n - i); // right: O(N)
-}
 // In-place rotation by k: rotate left / right in O(N) time & O(1) space
 rotate(s.begin(), s.begin() + (k % n), s.end());
 rotate(s.rbegin(), s.rbegin() + (k % n), s.rend());
@@ -359,6 +353,21 @@ vector<int> prefix_function(const string& s) {
     }
     return pi;
 }
+```
+
+### Trie (Prefix Tree): Insert & Prefix Count $O(L)$, $L$ = word length
+```cpp
+struct Trie { // node.cnt = # words passing through it; t[0] = root
+    struct Node { int nxt[26] = {}; int cnt = 0; }; vector<Node> t{Node()};
+    void insert(const string& s) { int u = 0; // O(L)
+        for (char c : s) { int i = c - 'a';
+            if (!t[u].nxt[i]) { t[u].nxt[i] = sz(t); t.push_back(Node()); }
+            u = t[u].nxt[i]; t[u].cnt++; } }
+    int count_prefix(const string& s) { int u = 0; // O(L): 0 = no word has prefix s
+        for (char c : s) { int i = c - 'a'; if (!t[u].nxt[i]) return 0; u = t[u].nxt[i]; }
+        return t[u].cnt; }
+};
+// XOR-Trie (nxt[2], insert bits 30..0 MSB-first): max-XOR pair/query in O(31).
 ```
 
 ---
@@ -412,21 +421,10 @@ auto get_compressed = [&](int x) -> int {
 };
 for (int &x : v) x = get_compressed(x); // in-place compress
 
-// 2. Inversion Count (Merge Sort) in O(N log N):
-ll merge_count(vector<int>& a, int l, int r) {
-    if (l >= r) return 0;
-    int mid = l + (r - l) / 2;
-    ll inv = merge_count(a, l, mid) + merge_count(a, mid + 1, r);
-    vector<int> tmp; int i = l, j = mid + 1;
-    while (i <= mid && j <= r) {
-        if (a[i] <= a[j]) tmp.push_back(a[i++]);
-        else { tmp.push_back(a[j++]); inv += (mid - i + 1); }
-    }
-    while (i <= mid) tmp.push_back(a[i++]);
-    while (j <= r) tmp.push_back(a[j++]);
-    for (int k = 0; k < sz(tmp); ++k) a[l + k] = tmp[k];
-    return inv;
-}
+// 2. Inversion Count via Fenwick Tree (reuses Fenwick struct, Sec. 14 pg. 15): O(N log N)
+Fenwick bit(sz(vals));
+ll inv = 0;
+for (int i = sz(v) - 1; i >= 0; --i) { inv += bit.query(v[i]); bit.add(v[i] + 1, 1); }
 // Caveat: Custom comparators MUST follow Strict Weak Ordering (use <, NEVER <=).
 ```
 
@@ -651,26 +649,22 @@ struct DiffArray {
 };
 ```
 
-### Sqrt Decomposition (Point Update $O(1)$ & Range Query $O(\sqrt{N})$)
+### Sparse Table: Static Range Min/Max $O(1)$ Query ($O(N \log N)$ Build)
 ```cpp
-struct SqrtDecomp {
-    int n, block_sz;
-    vector<ll> a, blocks;
-    SqrtDecomp(const vector<ll>& arr) : n(arr.size()), a(arr) { // O(N) build
-        block_sz = sqrt(n) + 1;
-        blocks.assign(n / block_sz + 1, 0);
-        for (int i = 0; i < n; ++i) blocks[i / block_sz] += a[i];
+struct SparseTable {
+    vector<vector<ll>> t; vector<int> lg;
+    SparseTable(const vector<ll>& a) { // O(N log N) build, immutable (no updates)
+        int n = sz(a), k = 32 - __builtin_clz(n);
+        t.assign(k, vector<ll>(n)); t[0] = a;
+        lg.assign(n + 1, 0);
+        for (int i = 2; i <= n; ++i) lg[i] = lg[i / 2] + 1;
+        for (int j = 1; j < k; ++j)
+            for (int i = 0; i + (1 << j) <= n; ++i)
+                t[j][i] = min(t[j - 1][i], t[j - 1][i + (1 << (j - 1))]); // swap min for max RMQ
     }
-    void update(int idx, ll val) { // O(1)
-        blocks[idx / block_sz] += (val - a[idx]);
-        a[idx] = val;
-    }
-    ll query(int L, int R) { // O(sqrt(N))
-        ll sum = 0;
-        while (L <= R && L % block_sz != 0) sum += a[L++];
-        while (L + block_sz - 1 <= R) { sum += blocks[L / block_sz]; L += block_sz; }
-        while (L <= R) sum += a[L++];
-        return sum;
+    ll query(int l, int r) { // O(1), inclusive [l, r]
+        int j = lg[r - l + 1];
+        return min(t[j][l], t[j][r - (1 << j) + 1]);
     }
 };
 ```
@@ -752,10 +746,11 @@ vector<int> slidingWindowMin(const vector<int>& a, int k) {
 
 # 10. Non-Linear Structures & STL Algorithms
 
-### `std::set`, `std::multiset` & `std::map` ($O(\log N)$)
+### `std::set`, `std::multiset`, `std::map` & `std::multimap` ($O(\log N)$)
 * `set`: ordered, unique, $O(\log N)$ insert/erase/find
 * `multiset`: ordered, allows dups, $O(\log N)$
-* `map`: ordered key-val store, $O(\log N)$
+* `map`: ordered key-val store, unique keys, $O(\log N)$
+* `multimap`: ordered key-val store, allows duplicate keys, $O(\log N)$
 
 ```cpp
 set<int> s; s.insert(5); s.erase(5); // O(log N)
@@ -769,11 +764,15 @@ ms.erase(ms.find(5)); // erases SINGLE instance of 5: O(log N)
 
 map<string, int> mp;
 mp["alice"] = 100; // O(log N): overwrites if key exists
-mp.insert(make_pair("bob", 90));  // O(log N): no-op if key exists
-mp.insert({"carol", 95});         // same, brace-init pair
+mp.insert(make_pair("bob", 90)); mp.insert({"carol", 95}); // O(log N): no-op if key exists
 auto it_m = mp.find("alice"); // O(log N)
 if (it_m != mp.end()) cout << it_m->first << ": " << it_m->second;
 for (auto& [k, val] : mp) cout << k << ": " << val << " "; // iterates in key-sorted order: O(N)
+
+multimap<string, int> mm;
+mm.insert({"alice", 1}); mm.insert({"alice", 2}); // O(log N): both kept, no overwrite
+auto [lo, hi] = mm.equal_range("alice"); // all values for a key: O(log N + matches)
+for (auto it = lo; it != hi; ++it) cout << it->second << " ";
 ```
 
 ### `std::priority_queue` (Heaps: $O(\log N)$ push/pop, $O(1)$ top)
@@ -786,7 +785,7 @@ priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(cmp)> custom_pq(
 
 ### Hash Tables: `map` vs `unordered_map`/`unordered_set` vs `gp_hash_table` ($O(1)$ avg)
 * <span class="badge-safe">SAFE</span> `map`/`set`: $O(\log N)$ guaranteed (RB-Tree), ordered keys.
-* <span class="badge-warn">CAVEAT</span> `unordered_map`/`unordered_set`: $O(1)$ avg, but $O(N)$ worst-case (vulnerable to anti-hash hacks on Codeforces).
+* <span class="badge-warn">CAVEAT</span> `unordered_map`/`unordered_set`/`unordered_multimap`: $O(1)$ avg, but $O(N)$ worst-case (vulnerable to anti-hash hacks on Codeforces).
 * <span class="badge-safe">FAST</span> `gp_hash_table`: Open-addressing, $3\times\text{--}5\times$ faster than `unordered_map` (use `null_type` as the value to get a set: `gp_hash_table<int, null_type>`).
 
 ```cpp
@@ -828,6 +827,9 @@ reverse(all(v)); rotate(v.begin(), v.begin() + k, v.end()); // O(N)
 ---
 
 # 11. Combinatorics & Counting
+
+### Stars & Bars: Solutions to $x_1 + x_2 + \dots + x_k = n$
+$$\text{Non-negative } (x_i \ge 0): \binom{n + k - 1}{k - 1} \qquad \text{Positive } (x_i \ge 1): \binom{n - 1}{k - 1}$$
 
 ### Factorials & Binomial Coefficients ($O(N)$ Prep, $O(1)$ Query)
 $$\binom{n}{k} = \frac{n!}{k!(n-k)!}$$

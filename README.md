@@ -67,13 +67,13 @@ For full empirical benchmarks (including normalized execution speed, memory foot
 | **2**  | **1. C++ Competitive Template & PBDS**    | Fast I/O, optimization pragmas & caveats, `__gnu_pbds` (`ordered_set`, `gp_hash_table`), local benchmark timer, standard macros, String Hashing (rolling hash)                                                                 |
 | **3**  | **2. Limits, I/O & Math Utilities**       | `numeric_limits`, float precision, `getchar_unlocked` fast int I/O, `__int128` fast I/O, float comparison `d_eq`, angle conversions, math functions                                                                            |
 | **4**  | **3. Bit Manipulation & `std::bitset`**   | Bit hacks, GCC built-ins (`__builtin_popcount`, `clz`, `ctz`), fast `int2bin` & `bin2int`, submask iteration $O(3^N)$, `std::bitset` methods, Gosper's Hack $O(\binom{N}{K})$                                                  |
-| **5**  | **4. String Manipulation & Parsing**      | Substrings, find/replace, char $\leftrightarrow$ digit conversions, `stringstream` tokenization, CSV splitting, palindromes, cyclic shifts, KMP $\pi$-function                                                                 |
-| **6**  | **5. Sorting & Coordinate Comp**          | `sort`, `stable_sort`, `nth_element`, custom struct & lambda comparators, $O(N \log N)$ coordinate compression & Inversion Count (Merge Sort), Pollard's Rho factorization                                                     |
+| **5**  | **4. String Manipulation & Parsing**      | Substrings, find/replace, char $\leftrightarrow$ digit conversions, `stringstream` tokenization, CSV splitting, palindromes, cyclic shifts, KMP $\pi$-function, Trie (prefix tree) insert & prefix count $O(L)$                |
+| **6**  | **5. Sorting & Coordinate Comp**          | `sort`, `stable_sort`, `nth_element`, custom struct & lambda comparators, $O(N \log N)$ coordinate compression & Inversion Count (Fenwick/BIT), Pollard's Rho factorization                                                    |
 | **7**  | **6. Search: Binary & Ternary Search**    | `lower_bound`/`upper_bound` idioms, BS on answer template, Floating/Continuous Binary Search, Discrete & Continuous Ternary Search                                                                                             |
 | **8**  | **7. Number Theory I: Primes & Fact**     | First 25 primes, deterministic 64-bit Miller-Rabin ($n < 2^{64}$), Linear Sieve / SPF $O(N)$, Factorization $O(\log N)$ & $O(\sqrt{N})$, Divisors $O(d(N))$                                                                    |
-| **9**  | **8. Range Queries & Prefix Sums**        | 1D & 2D Prefix Sums ($O(1)$ query), 1D Difference Array ($O(1)$ range update), Sqrt Decomposition $O(\sqrt{N})$                                                                                                                |
+| **9**  | **8. Range Queries & Prefix Sums**        | 1D & 2D Prefix Sums ($O(1)$ query), 1D Difference Array ($O(1)$ range update), Sparse Table static RMQ ($O(N \log N)$ build, $O(1)$ query)                                                                                     |
 | **10** | **9. Two Pointers & Sliding Window**      | Two-sum sorted, variable sliding window (at most $K$ distinct), Monotonic Deque sliding window minimum $O(N)$                                                                                                                  |
-| **11** | **10. Non-Linear Structs & Algorithms**   | `std::set`, `std::multiset` erase, `std::map`, `priority_queue`, `map` vs `unordered_map`/`unordered_set` vs `gp_hash_table` Big-O, `custom_hash` struct, `<numeric>` & `<algorithm>`                                          |
+| **11** | **10. Non-Linear Structs & Algorithms**   | `std::set`, `std::multiset` erase, `std::map`, `std::multimap` (`equal_range`), `priority_queue`, `map` vs `unordered_map`/`unordered_set` vs `gp_hash_table` Big-O, `custom_hash` struct, `<numeric>` & `<algorithm>`         |
 | **12** | **11. Combinatorics & Counting**          | Factorials & $\binom{n}{r}$ precomputation, Stars & Bars, Catalan numbers, Derangements, Inclusion-Exclusion, Lucas' Theorem                                                                                                   |
 | **13** | **12. Number Theory II: Modular Math**    | Extended GCD, Modular exponentiation & inverse (Fermat & ExtGCD), Euler's Totient $\phi(n)$, Segmented Sieve, Chinese Remainder Theorem (CRT)                                                                                  |
 | **14** | **13. Linear Structures & Stack/Queue**   | `std::vector`, `std::deque`, `std::stack`, `std::queue`, Monotonic Stack (NGE & Largest Rectangle in Histogram $O(N)$), circular array cyclic traversal, Z-Function pattern matching                                           |
@@ -195,7 +195,6 @@ The algorithms, theorems, and implementations in this notebook are sourced and a
   - **Linear Sieve & SPF**: Smallest Prime Factor array for $O(\log N)$ prime factorization (Section 7).
   - **Chinese Remainder Theorem (CRT)**: Pairwise coprime reconstruction (Section 12).
   - **Disjoint Set Union (DSU)**: Path compression & Union by rank/size (Section 15).
-  - **Sqrt Decomposition**: Block-size $O(\sqrt{N})$ range query & $O(1)$ point update (Section 8).
   - **Binary Indexed Tree (Fenwick)**: Point update & prefix sum queries in $O(\log N)$ (Section 14).
   - **Binary Lifting LCA**: Binary jumps table & $O(\log N)$ Lowest Common Ancestor query (Section 17).
   - **Matrix Exponentiation for Recurrences**: $O(N^3 \log K)$ transition matrix fast powers (Section 21).
@@ -210,6 +209,7 @@ The algorithms, theorems, and implementations in this notebook are sourced and a
 * **Kamil Debowski (Errichto)** — [Errichto/contest_library](https://github.com/Errichto/contest_library): Pre-submission bug traps and edge cases checklist (Table of Contents & Reference Index page).
 * **Sergey Slotin** — [Algorithmica](https://algorithmica.org/en/): Ternary search precision criteria & compiler optimizations (Section 6).
 * **OI Wiki Project** — [OI Wiki (Olympic Informatics)](https://oi-wiki.org/): Sprague-Grundy theorem & Mex calculation (Section 21).
+* **José Pablo ("yeipi"), Algoritmia UP** — [Structdex.cpp](https://structdex.vercel.app/): C++ data structure quick-reference. Its coverage prompted the addition of the Sparse Table (Section 8), the Trie (Section 4) and `std::multimap` (Section 10), plus the rewrite of the fast I/O setup into the chained `cin.tie(0)->sync_with_stdio(0);` one-liner (Section 1). The implementations here were written independently in their standard form, so this is a credit for the reference, not a code source.
 
 ### Foundational Algorithmic Papers & Historic Theorems
 * **A. M. Andrew (1979)**: *Another efficient algorithm for convex hulls in two dimensions* — Monotone Chain Convex Hull in $O(N \log N)$ (Section 22).
@@ -229,6 +229,7 @@ A handful of items in this notebook are common competitive-programming conventio
 * **`getchar_unlocked` fast integer reader** (Section 2): standard unbuffered I/O idiom, ubiquitous across competitive C++ templates.
 * **Basic DFS/BFS, Bipartite Check & Flood Fill** (Section 14): textbook graph traversal taught identically in nearly every algorithms course/resource.
 * **Elementary combinatorics identities** — Stars & Bars, Catalan recurrence, Derangements, Pigeonhole Principle (Section 11): standard results found in any combinatorics reference, not specific to one book cited above.
+* **Sparse Table (static RMQ)** (Section 8) and **Trie (prefix tree)** (Section 4): canonical textbook structures whose sparse-table doubling loop and 26-ary trie node layout are written near-identically across every CP resource.
 
 ---
 
