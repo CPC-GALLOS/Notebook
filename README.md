@@ -16,13 +16,18 @@ Built with **[Marp](https://marp.app/)** and a custom CSS theme (`src/us-letter-
 ## Preview
 
 <p align="center">
-  <a href="./Notebook-TRD.pdf">
+  <a href="https://github.com/CPC-GALLOS/Notebook/releases/latest/download/Notebook-TRD.pdf">
     <img src="./src/preview.png" alt="Notebook-TRD preview: Table of Contents, Number Theory, and 2D Geometry pages" width="100%">
   </a>
 </p>
 
 <p align="center">
-  <b><a href="./Notebook-TRD.pdf">📄 View / Download the full 25-page PDF</a></b>
+  <a href="https://github.com/CPC-GALLOS/Notebook/releases/latest"><img src="https://img.shields.io/github/v/release/CPC-GALLOS/Notebook?color=blue&label=Latest%20Release" alt="Latest Release"></a>
+  <a href="https://github.com/CPC-GALLOS/Notebook/releases/latest/download/Notebook-TRD.pdf"><img src="https://img.shields.io/badge/Download-Notebook--TRD.pdf-red?logo=adobeacrobatreader&logoColor=white" alt="Download PDF"></a>
+</p>
+
+<p align="center">
+  <b><a href="https://github.com/CPC-GALLOS/Notebook/releases/latest/download/Notebook-TRD.pdf">📄 Descargar / Ver el PDF oficial de 25 páginas (Latest Release)</a></b>
 </p>
 
 ---
@@ -148,7 +153,7 @@ npx -y @marp-team/marp-cli Notebook-TRD.md --theme-set src/us-letter-light.css -
 The algorithms, theorems, and implementations in this notebook are sourced and adapted from the following literature cataloged at [CPC Gallos — Recursos](https://cpc-gallos.github.io/blog/Recursos/) and open-source libraries:
 
 ### Original CPC Gallos Content
-* **Ariel Parra** — [*Plantilla* (Template)](https://cpc-gallos.github.io/blog/Plantilla/), CPC Gallos blog: the club's own long-form C++ competitive template — TLE pragmas (`Ofast,unroll-loops`, `avx2` target), `bits/stdc++.h` + type aliases (`ll`, `ull`), the `ios::sync_with_stdio(0); cin.tie(0);` fast I/O setup, `#define endl '\n'`, and `#define all(x)` — is the direct basis for Section 1's C++ Template & PBDS.
+* **Ariel Parra** — [Template](https://cpc-gallos.github.io/blog/Template/), CPC Gallos blog: the club's own long-form C++ competitive template — TLE pragmas (`Ofast,unroll-loops`, `avx2` target), `bits/stdc++.h` + type aliases (`ll`, `ull`), the `ios::sync_with_stdio(0); cin.tie(0);` fast I/O setup, `#define endl '\n'`, and `#define all(x)` — is the direct basis for Section 1's C++ Template & PBDS.
 * **Ariel Parra**: `int2bin`/`bin2int` binary-vector conversion helpers (Section 3) and the circular string rotations helper (Section 4) are original club implementations, credited inline in the code comments where they appear.
 
 ### Team & Personal Acknowledgments
@@ -205,7 +210,7 @@ The algorithms, theorems, and implementations in this notebook are sourced and a
 * **Policy-Based Data Structures (PBDS)**: [Codeforces Blog #11080](https://codeforces.com/blog/entry/11080) by **adamant** (`ordered_set`, `order_of_key`, `find_by_order`, `gp_hash_table`) (Section 1).
 * **Anti-Hash Table Hacking (`custom_hash`)**: [Codeforces Blog #62393](https://codeforces.com/blog/entry/62393) by **neal** (`splitmix64` randomized bit-mixer for hash maps) (Section 10).
 * **Brace-Initialization Container Idiom**: [Codeforces Blog #15643, "C++ Tricks"](https://codeforces.com/blog/entry/15643) by **HosseinYousefi** (`p = {3, 4}` / `v = {4, 5}` over `make_pair`/explicit ctor calls) (Section 1).
-* **Fast Unsynchronized `iostream` for Large Input**: the classic `ios::sync_with_stdio(false); cin.tie(nullptr);` technique (adopted via Ariel Parra's *Plantilla*, above) traces back to [Codeforces Blog #925](https://codeforces.com/blog/entry/925) by **yak_ex** (Section 1).
+* **Fast Unsynchronized `iostream` for Large Input**: the classic `ios::sync_with_stdio(false); cin.tie(nullptr);` technique (adopted via Ariel Parra's *Template*, above) traces back to [Codeforces Blog #925](https://codeforces.com/blog/entry/925) by **yak_ex** (Section 1).
 * **Kamil Debowski (Errichto)** — [Errichto/contest_library](https://github.com/Errichto/contest_library): Pre-submission bug traps and edge cases checklist (Table of Contents & Reference Index page).
 * **Sergey Slotin** — [Algorithmica](https://algorithmica.org/en/): Ternary search precision criteria & compiler optimizations (Section 6).
 * **OI Wiki Project** — [OI Wiki (Olympic Informatics)](https://oi-wiki.org/): Sprague-Grundy theorem & Mex calculation (Section 21).
